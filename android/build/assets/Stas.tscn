@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprite/MonedaD — копия-export.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 32, 32 )
+scale = Vector2( 0.157143, 0.15 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 10, 0, 140, 160 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 56.0
+margin_top = 24.0
+margin_right = 80.0
+margin_bottom = 64.0
+text = "1"
+__meta__ = {
+"_editor_description_": ""
+}

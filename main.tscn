@@ -1,0 +1,424 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://.tres" type="TileSet" id=2]
+[ext_resource path="res://level1.gd" type="Script" id=3]
+[ext_resource path="res://MONY.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Y[ravle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=6]
+[ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=7]
+[ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=8]
+[ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=9]
+[ext_resource path="res://STATS.tscn" type="PackedScene" id=10]
+[ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=11]
+[ext_resource path="res://NPC.tscn" type="PackedScene" id=12]
+[ext_resource path="res://BARER.tscn" type="PackedScene" id=13]
+
+[node name="level 1" type="Node2D"]
+z_as_relative = false
+script = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.25, 0.25 )
+tile_set = ExtResource( 2 )
+show_collision = true
+compatibility_mode = true
+format = 1
+tile_data = PoolIntArray( -983019, 536870922, 0, -851947, 536870922, 0, -720875, 536870922, 0, -589803, 536870922, 0, -458731, 536870922, 0, -327659, 536870922, 0, -196587, 536870922, 0, -65515, 536870922, 0, -65222, 4, 0, -65202, 4, 0, 65557, 536870922, 0, 196629, 536870922, 0, 262387, 4, 0, 262406, 4, 0, 327701, 536870922, 0, 458773, 536870922, 0, 524513, 4, 0, 524526, 4, 0, 589845, 536870922, 0, 720917, 536870922, 0, 720958, 4, 0, 786543, 4, 0, 786552, 4, 0, 851989, 536870922, 0, 852173, 4, 0, 852185, 4, 0, 983061, 536870922, 0, 1114135, 536870938, 0, 1114137, 536870938, 0, 1114139, 536870938, 0, 1114141, 536870938, 0, 1114143, 536870938, 0, 1114145, 536870938, 0, 1114146, 536870935, 0, 1114147, 536870938, 0, 1114148, 536870935, 0, 1179999, 4, 0, 1180021, 4, 0, 1245346, 4, 0, 1245362, 4, 0, 1311043, 4, 0, 1311065, 4, 0, 1441869, 4, 0, 1441883, 4, 0, 2228612, 4, 0 )
+
+[node name="TileMap" type="TileMap" parent="TileMap"]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( -327365, 19, 0, -327351, 21, 0, -65126, 10, 0, 243, 20, 0, 251, 21, 0, 316, 4, 0, 318, 4, 0, 320, 4, 0, 321, 4, 0, 323, 4, 0, 325, 4, 0, 327, 4, 0, 328, 4, 0, 330, 4, 0, 332, 4, 0, 65787, 21, 0, 65790, 19, 0, 65946, 10, 0, 131371, 19, 0, 197018, 10, 0, 262374, 19, 0, 262376, 18, 0, 262453, 4, 0, 327803, 20, 0, 327814, 19, 0, 327923, 4, 0, 327925, 4, 0, 327927, 4, 0, 327928, 4, 0, 327930, 4, 0, 327932, 4, 0, 327934, 4, 0, 327936, 4, 0, 327938, 4, 0, 327940, 4, 0, 327942, 4, 0, 328090, 10, 0, 393626, 10, 0, 458782, 20, 0, 458798, 20, 0, 458807, 19, 0, 459053, 4, 0, 524400, 18, 0, 524600, 21, 0, 524698, 10, 0, 589973, 18, 0, 590018, 20, 0, 590049, 4, 0, 590051, 4, 0, 590053, 4, 0, 590055, 4, 0, 590057, 4, 0, 590059, 4, 0, 590061, 4, 0, 655489, 4, 0, 655491, 4, 0, 655492, 4, 0, 655494, 4, 0, 655496, 4, 0, 655498, 4, 0, 655500, 4, 0, 655502, 4, 0, 655770, 10, 0, 720937, 4, 0, 721086, 3, 0, 721117, 4, 0, 786451, 20, 0, 786472, 23, 0, 786474, 23, 0, 786476, 4, 0, 786478, 4, 0, 786480, 4, 0, 786482, 4, 0, 786484, 4, 0, 786486, 4, 0, 786488, 4, 0, 786490, 4, 0, 786491, 4, 0, 786492, 4, 0, 786494, 4, 0, 786495, 4, 0, 786496, 4, 0, 786732, 19, 0, 786842, 10, 0, 852079, 4, 0, 852081, 4, 0, 852083, 4, 0, 852085, 4, 0, 852087, 4, 0, 852088, 4, 0, 852279, 4, 0, 852281, 4, 0, 852282, 4, 0, 852284, 4, 0, 917654, 4, 0, 917656, 4, 0, 917657, 4, 0, 917659, 4, 0, 917709, 4, 0, 917711, 4, 0, 917713, 4, 0, 917715, 4, 0, 917716, 4, 0, 917718, 4, 0, 917720, 4, 0, 917855, 20, 0, 917856, 21, 0, 917871, 18, 0, 917914, 10, 0, 983192, 20, 0, 983199, 20, 0, 983207, 18, 0, 983217, 21, 0, 1048762, 4, 0, 1048764, 4, 0, 1048766, 4, 0, 1048768, 4, 0, 1048769, 4, 0, 1048771, 4, 0, 1048773, 4, 0, 1048775, 4, 0, 1048888, 20, 0, 1048896, 20, 0, 1048899, 21, 0, 1048911, 21, 0, 1048986, 10, 0, 1114135, 536870928, 0, 1114137, 536870928, 0, 1114139, 536870928, 0, 1114141, 536870928, 0, 1114143, 536870928, 0, 1114144, 536870928, 0, 1114146, 536870916, 0, 1114414, 4, 0, 1179671, 536870924, 0, 1179673, 536870924, 0, 1179675, 536870924, 0, 1179677, 536870924, 0, 1179679, 536870924, 0, 1179681, 536870924, 0, 1179683, 536870924, 0, 1179684, 536870924, 0, 1179719, 20, 0, 1179724, 18, 0, 1179729, 19, 0, 1179918, 19, 0, 1179921, 19, 0, 1179923, 21, 0, 1180058, 10, 0, 1245536, 4, 0, 1245538, 4, 0, 1245540, 4, 0, 1245541, 4, 0, 1245543, 4, 0, 1245545, 4, 0, 1245547, 4, 0, 1245549, 4, 0, 1245551, 4, 0, 1245553, 4, 0, 1245554, 4, 0, 1245556, 4, 0, 1310882, 4, 0, 1310884, 4, 0, 1310885, 4, 0, 1310887, 4, 0, 1310889, 4, 0, 1310891, 4, 0, 1310893, 4, 0, 1310895, 4, 0, 1310897, 4, 0, 1310899, 4, 0, 1311010, 4, 0, 1311130, 10, 0, 1376353, 4, 0, 1376355, 4, 0, 1376580, 4, 0, 1376582, 4, 0, 1376583, 4, 0, 1376585, 4, 0, 1376587, 4, 0, 1376589, 4, 0, 1376591, 4, 0, 1376593, 4, 0, 1376595, 4, 0, 1376597, 4, 0, 1376599, 4, 0, 1442202, 10, 0, 1507405, 4, 0, 1507407, 4, 0, 1507408, 4, 0, 1507409, 4, 0, 1507410, 4, 0, 1507411, 4, 0, 1507412, 4, 0, 1507414, 4, 0, 1507416, 4, 0, 1507417, 4, 0, 1507419, 4, 0, 1507600, 4, 0, 1507602, 4, 0, 1507604, 4, 0, 1507606, 4, 0, 1507608, 4, 0, 1573274, 10, 0, 1704346, 10, 0, 1835418, 10, 0, 1966470, 20, 0, 1966472, 18, 0, 1966476, 21, 0, 1966490, 10, 0, 2097562, 10, 0, 2294149, 4, 0, 2294151, 4, 0, 2294153, 4, 0, 2294155, 4, 0, 2294157, 4, 0, 2294159, 4, 0, 2294161, 4, 0, 2294163, 4, 0, 2294164, 4, 0, 2294166, 4, 0, 2294168, 4, 0, 2687119, 18, 0, 2687120, 18, 0, 2687121, 18, 0, 2687122, 18, 0, 2687123, 18, 0, 2687124, 18, 0, 2687125, 18, 0, 2687126, 18, 0, 2687127, 18, 0 )
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 904, 216 )
+
+[node name="Node2D" parent="Node2D" instance=ExtResource( 4 )]
+position = Vector2( 272, 0 )
+
+[node name="Node2D2" parent="Node2D" instance=ExtResource( 4 )]
+position = Vector2( 616, 168 )
+
+[node name="Node2D" parent="Node2D/Node2D2" instance=ExtResource( 4 )]
+position = Vector2( 96, 0 )
+
+[node name="Node2D" parent="Node2D/Node2D2/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 224, 0 )
+
+[node name="Node2D" parent="Node2D/Node2D2/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 56, -72 )
+
+[node name="Node2D" parent="Node2D/Node2D2/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 48, -40 )
+
+[node name="Node2D" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 72, 0 )
+
+[node name="Node2D2" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 200, 0 )
+
+[node name="Node2D3" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 256, -40 )
+
+[node name="Node2D4" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 296, -64 )
+
+[node name="Node2D5" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 360, -72 )
+
+[node name="Node2D6" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 480, -56 )
+
+[node name="Node2D7" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 648, -56 )
+
+[node name="Node2D8" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 752, 16 )
+
+[node name="Node2D10" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 864, 32 )
+
+[node name="Node2D9" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 936, 80 )
+
+[node name="Node2D11" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 1072, 88 )
+
+[node name="Node2D12" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 1160, 88 )
+rotation = 0.00784257
+
+[node name="Node2D13" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 1288, 32 )
+rotation = 0.00784257
+
+[node name="Node2D14" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 1464, 24 )
+rotation = 0.00784257
+
+[node name="Node2D15" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 1616, -8 )
+rotation = 0.00784257
+
+[node name="Node2D16" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 1752, -8 )
+rotation = 0.0142676
+
+[node name="Node2D17" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 1776, -72 )
+rotation = 0.0142676
+
+[node name="Node2D18" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 1936, -72 )
+rotation = 0.0142676
+
+[node name="Node2D21" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2008, -72 )
+rotation = 0.0142676
+
+[node name="Node2D22" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2064, -64 )
+rotation = 0.0142676
+
+[node name="Node2D23" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2192, -120 )
+rotation = 0.0142676
+
+[node name="Node2D24" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2280, -120 )
+rotation = 0.0142676
+
+[node name="Node2D27" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2384, -120 )
+rotation = 0.0142676
+
+[node name="Node2D28" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2488, -120 )
+rotation = 0.0142676
+
+[node name="Node2D29" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2584, -120 )
+rotation = 0.0142676
+
+[node name="Node2D30" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2608, -112 )
+rotation = 0.0142676
+
+[node name="Node2D31" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2632, -88 )
+rotation = 0.0142676
+
+[node name="Node2D32" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2656, -56 )
+rotation = 0.0142676
+
+[node name="Node2D33" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2664, -24 )
+rotation = 0.0142676
+
+[node name="Node2D34" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2680, 24 )
+rotation = 0.0142676
+
+[node name="Node2D35" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2704, 64 )
+rotation = 0.0239785
+
+[node name="Node2D36" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2736, 112 )
+rotation = 0.0239785
+
+[node name="Node2D37" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2768, 168 )
+rotation = 0.0239785
+
+[node name="Node2D38" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2952, 120 )
+rotation = 0.0239785
+
+[node name="Node2D39" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3144, 72 )
+rotation = 0.0239785
+
+[node name="Node2D40" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3320, 8 )
+rotation = 0.0239785
+
+[node name="Node2D46" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3568, 128 )
+rotation = 0.0239785
+
+[node name="Node2D47" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3632, 128 )
+rotation = 0.0239785
+
+[node name="Node2D48" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3704, 128 )
+rotation = 0.0239785
+
+[node name="Node2D49" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3776, 136 )
+rotation = 0.0239785
+
+[node name="Node2D50" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3832, 112 )
+rotation = 0.0239785
+
+[node name="Node2D52" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3944, 136 )
+rotation = 0.193574
+
+[node name="Node2D53" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4024, 104 )
+rotation = -0.0183707
+
+[node name="Node2D54" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3864, 88 )
+rotation = -0.0183707
+
+[node name="Node2D55" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3904, 80 )
+rotation = -0.0183707
+
+[node name="Node2D56" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4080, 96 )
+rotation = -0.0183707
+
+[node name="Node2D57" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4168, 104 )
+rotation = -0.0183707
+
+[node name="Node2D58" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4224, 96 )
+rotation = -0.0183707
+
+[node name="Node2D59" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4408, 136 )
+rotation = -0.0183707
+
+[node name="Node2D60" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4448, 168 )
+rotation = -0.00989016
+
+[node name="Node2D61" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4472, 200 )
+rotation = 0.00778917
+
+[node name="Node2D62" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4488, 224 )
+rotation = 0.00778917
+
+[node name="Node2D63" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4536, 272 )
+rotation = 0.00778917
+
+[node name="Node2D64" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4560, 328 )
+rotation = 0.00778917
+
+[node name="Node2D65" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 4680, 352 )
+rotation = 0.00778917
+
+[node name="Node2D41" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3120, -80 )
+rotation = 0.0239785
+
+[node name="Node2D42" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3248, -128 )
+rotation = 0.0239785
+
+[node name="Node2D43" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3400, -200 )
+rotation = 0.0239785
+
+[node name="Node2D44" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3544, -208 )
+rotation = 0.0239785
+
+[node name="Node2D45" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 3488, -208 )
+rotation = 0.0239785
+
+[node name="Node2D25" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2120, -112 )
+rotation = 0.0142676
+
+[node name="Node2D26" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 2120, -112 )
+rotation = 0.0142676
+
+[node name="Node2D19" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 1816, -104 )
+rotation = 0.0142676
+
+[node name="Node2D20" parent="Node2D/Node2D2/Node2D/Node2D/Node2D/Node2D" instance=ExtResource( 4 )]
+position = Vector2( 1816, -104 )
+rotation = 0.0142676
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 394.125, 200.75 )
+scale = Vector2( 0.118568, 0.192654 )
+texture = ExtResource( 6 )
+
+[node name="ParallaxBackground5" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground5"]
+motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 812, 0 )
+
+[node name="Cloud-export" type="Sprite" parent="ParallaxBackground5/ParallaxLayer"]
+position = Vector2( 376, -88 )
+scale = Vector2( 0.123529, 0.123529 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.25, 0.25 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 812, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 405, 278 )
+scale = Vector2( 0.118568, 0.192654 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+motion_scale = Vector2( 0.7, 0.7 )
+motion_mirroring = Vector2( 805, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 398, 321.782 )
+scale = Vector2( 0.118568, 0.113219 )
+texture = ExtResource( 9 )
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.75, 0.75 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
+motion_mirroring = Vector2( 805, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground4/ParallaxLayer"]
+position = Vector2( 395, 425.674 )
+scale = Vector2( 0.118568, 0.151082 )
+texture = ExtResource( 7 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 439, 216 )
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+rotating = true
+current = true
+process_mode = 0
+limit_left = 336
+limit_top = -100000
+limit_right = 6584
+limit_bottom = 570
+
+[node name="BARER" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1056, 144 )
+
+[node name="BARER2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 640, 152 )
+
+[node name="CONTROL" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CONTROL"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -80.0
+margin_bottom = 50.0
+text = "EXZIT"
+
+[node name="Node2D2" parent="CONTROL" instance=ExtResource( 5 )]
+position = Vector2( -14, 32 )
+
+[node name="STATS" parent="CONTROL" instance=ExtResource( 10 )]
+position = Vector2( -56, -24 )
+
+[node name="NPC" parent="." instance=ExtResource( 12 )]
+position = Vector2( 568, 24 )
+
+[node name="NPC2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1096, 200 )
+
+[node name="NPC3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1600, 40 )
+
+[node name="NPC4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2448, 160 )
+
+[node name="NPC5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3104, 64 )
+
+[node name="NPC6" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3456, -24 )
+
+[node name="NPC7" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3808, -88 )
+
+[node name="NPC8" parent="." instance=ExtResource( 12 )]
+position = Vector2( 4896, -160 )
+
+[node name="NPC9" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5072, 168 )
+
+[node name="NPC10" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5520, 136 )
+
+[node name="NPC11" parent="." instance=ExtResource( 12 )]
+position = Vector2( 6136, 392 )
+rotation = 0.00559583
+
+[connection signal="pressed" from="CONTROL/Button" to="." method="_on_Button_pressed"]
