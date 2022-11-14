@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://sprite/Player Skin1 — копия/adventurer-run-03-export.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -40,7 +40,7 @@ animations = [ {
 "frames": [ ExtResource( 15 ) ],
 "loop": true,
 "name": "jump",
-"speed": 8.0
+"speed": 2.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": false,
@@ -59,6 +59,34 @@ extents = Vector2( 32.5, 28.9141 )
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 20.0
 height = 12.5
+
+[sub_resource type="Animation" id=7]
+resource_name = "jump28"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ "jump", "jump" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 3 ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "swing"
@@ -114,8 +142,7 @@ script = ExtResource( 2 )
 position = Vector2( 31.25, -10 )
 scale = Vector2( 0.344248, 0.344248 )
 frames = SubResource( 3 )
-animation = "attac 2"
-playing = true
+animation = "jump"
 flip_h = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
@@ -134,6 +161,7 @@ cast_to = Vector2( 0, 33.75 )
 
 [node name="Animate228" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Weapon")
+anims/jump28 = SubResource( 7 )
 anims/swing = SubResource( 5 )
 anims/swing2 = SubResource( 6 )
 

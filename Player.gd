@@ -12,7 +12,7 @@ var der = 1
 var damage = 1
 var coins = 0
 var skin = 0
-
+var animate_attac
 
 
 var vel = Vector2()
@@ -29,6 +29,8 @@ func _physics_process(delta):
 		get_tree().reload_current_scene()
 	
 	if Input.is_action_pressed("attac"):
+		animate_attac = rand_range(1, 3)
+		print(animate_attac)
 		$Animate228.play("swing")
 		
 	if Input.is_action_pressed("left"):

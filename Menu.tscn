@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
-[ext_resource path="res://sprite/блоки/background/sky_cloud-export.png" type="Texture" id=2]
+[ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=2]
 [ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=3]
 [ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=4]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=5]
 [ext_resource path="res://STATS.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=7]
 
 [sub_resource type="AtlasTexture" id=1]
 
@@ -20,29 +21,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="SkyCloud-export" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 412, 196 )
-scale = Vector2( 0.119767, 0.185782 )
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sky-export" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 402.5, 147.625 )
+scale = Vector2( 0.117006, 0.138744 )
 texture = ExtResource( 2 )
 
-[node name="Mountain2-export" type="Sprite" parent="StaticBody2D/SkyCloud-export"]
-position = Vector2( -33.3982, 279.898 )
-scale = Vector2( 1.00729, 0.842364 )
+[node name="Cloud-export" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 404, 95 )
+scale = Vector2( 0.122427, 0.122427 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ParallaxBackground/ParallaxLayer"]
+
+[node name="Mountain2-export" type="Sprite" parent="ParallaxBackground/ParallaxLayer/StaticBody2D"]
+position = Vector2( 407, 253 )
+scale = Vector2( 0.12064, 0.156496 )
 texture = ExtResource( 5 )
 
-[node name="Pine1-export" type="Sprite" parent="StaticBody2D/SkyCloud-export/Mountain2-export"]
+[node name="Pine1-export" type="Sprite" parent="ParallaxBackground/ParallaxLayer/StaticBody2D/Mountain2-export"]
 position = Vector2( 33.1565, 461.673 )
 scale = Vector2( 0.992764, 0.623883 )
 texture = ExtResource( 3 )
 
-[node name="Pine2-export" type="Sprite" parent="StaticBody2D/SkyCloud-export/Mountain2-export/Pine1-export"]
+[node name="Pine2-export" type="Sprite" parent="ParallaxBackground/ParallaxLayer/StaticBody2D/Mountain2-export/Pine1-export"]
 position = Vector2( -33.3982, 243.252 )
 scale = Vector2( 1.01457, 0.576446 )
 texture = ExtResource( 4 )
 
-[node name="STATS" parent="StaticBody2D" instance=ExtResource( 6 )]
+[node name="STATS" parent="ParallaxBackground/ParallaxLayer/StaticBody2D" instance=ExtResource( 6 )]
 position = Vector2( 680, -24 )
 z_as_relative = false
 
@@ -74,9 +84,9 @@ anchor_left = 0.317
 anchor_top = 0.467
 anchor_right = 0.429
 anchor_bottom = 0.507
-margin_left = -240.6
+margin_left = -237.6
 margin_top = -178.8
-margin_right = -170.2
+margin_right = -165.2
 margin_bottom = -130.8
 rect_pivot_offset = Vector2( 56, 56 )
 custom_colors/font_color_disabled = Color( 0, 0.980392, 1, 1 )
@@ -90,12 +100,12 @@ text = "NEW GAME"
 icon = SubResource( 1 )
 script = SubResource( 2 )
 
-[node name="Magazin" type="Button" parent="."]
+[node name="Shop" type="Button" parent="."]
 margin_left = 16.0
 margin_top = 152.0
 margin_right = 178.0
 margin_bottom = 216.0
-text = "Magazin"
+text = "Shop"
 
 [node name="Button" type="Button" parent="."]
 margin_left = 16.0
@@ -107,5 +117,5 @@ text = "characters"
 [connection signal="pressed" from="OPSION" to="." method="_on_OPSION_pressed"]
 [connection signal="pressed" from="QUIT" to="." method="_on_QUIT_pressed"]
 [connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="Magazin" to="." method="_on_Magazin_pressed"]
+[connection signal="pressed" from="Shop" to="." method="_on_Magazin_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
