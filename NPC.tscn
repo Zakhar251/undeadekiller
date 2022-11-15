@@ -219,8 +219,8 @@ shape = SubResource( 2 )
 position = Vector2( 264, 104 )
 scale = Vector2( 0.229917, 0.229917 )
 frames = SubResource( 23 )
-animation = "death"
-frame = 3
+animation = "idle"
+playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
 

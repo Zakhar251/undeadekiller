@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED =50
+const SPEED =0
 const GRAVITY = 100
 const FLOOR = Vector2(0 , -1)
 onready var hp = 30
@@ -25,10 +25,13 @@ func handle_hit(damage: int):
 func _der():
 		der *= -1
 		$Goblin.flip_h = !$Goblin.flip_h
-func _physics_process(delta):	
+func _physics_process(delta):
+	
+		
+			
 	if is_alive == true:
 		vel.x = SPEED * der
-		$Goblin.play("run")
+		$Goblin.play("idle")
 	vel.y += (GRAVITY * delta)
 	move_and_slide(vel, FLOOR)
 	if is_on_wall():
