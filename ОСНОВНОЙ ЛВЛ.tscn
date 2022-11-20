@@ -659,7 +659,7 @@ position = Vector2( -56, -24 )
 position = Vector2( 561, 30 )
 
 [node name="NPC2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1096, 200 )
+position = Vector2( 1113, 206 )
 
 [node name="NPC3" parent="." instance=ExtResource( 12 )]
 position = Vector2( 1600, 40 )
