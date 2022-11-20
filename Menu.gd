@@ -1,10 +1,11 @@
 extends Control
 
+func _on_TextureButton_pressed():
+	 get_tree().change_scene("res://REVIM.tscn")
 
 
 func _on_new_game_pressed():
 	 get_tree().change_scene("res://REVIM.tscn")
-
 
 
 func _on_QUIT_pressed():
