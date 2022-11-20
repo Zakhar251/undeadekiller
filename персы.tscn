@@ -4,10 +4,10 @@
 [ext_resource path="res://sprite/блоки/background/sky_cloud-export.png" type="Texture" id=2]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=3]
 [ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=4]
-[ext_resource path="res://sprite/блоки/управление/Sprite-0003.png" type="Texture" id=5]
+[ext_resource path="res://sprite/Бойцы.png" type="Texture" id=5]
 [ext_resource path="res://персы.gd" type="Script" id=6]
-[ext_resource path="res://sprite/1668940952651.png" type="Texture" id=7]
-[ext_resource path="res://sprite/блоки/управление/Sprite-0003 — копия.png" type="Texture" id=8]
+[ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=7]
+[ext_resource path="res://sprite/Майкл.png" type="Texture" id=8]
 
 [node name="персы" type="Control"]
 anchor_right = 1.0
@@ -22,7 +22,7 @@ scale = Vector2( 0.119767, 0.185782 )
 texture = ExtResource( 2 )
 
 [node name="Mountain2-export" type="Sprite" parent="StaticBody2D/SkyCloud-export"]
-position = Vector2( -33.3982, 279.898 )
+position = Vector2( -41.7478, 796.632 )
 scale = Vector2( 1.00729, 0.842364 )
 texture = ExtResource( 3 )
 
@@ -32,7 +32,7 @@ scale = Vector2( 0.992764, 0.623883 )
 texture = ExtResource( 4 )
 
 [node name="Pine2-export" type="Sprite" parent="StaticBody2D/SkyCloud-export/Mountain2-export/Pine1-export"]
-position = Vector2( -33.3982, 243.252 )
+position = Vector2( 8.34937, 263.736 )
 scale = Vector2( 1.01457, 0.576446 )
 texture = ExtResource( 1 )
 
@@ -46,25 +46,26 @@ texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="Sprite-0003" type="Sprite" parent="."]
-position = Vector2( 384, 32 )
-scale = Vector2( 0.065625, 0.065625 )
+position = Vector2( 410, 20 )
+scale = Vector2( 0.133, 0.114588 )
 texture = ExtResource( 5 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 282.0
-margin_top = 195.0
-margin_right = 282.0
-margin_bottom = 142.0
+margin_left = 334.0
+margin_top = 162.0
+margin_right = 334.0
+margin_bottom = 109.0
 
 [node name="НАЗАД" type="TextureButton" parent="."]
-margin_left = 734.0
-margin_top = 337.0
-margin_right = 784.0
-margin_bottom = 387.0
+margin_left = 14.0
+margin_top = 312.0
+margin_right = 88.0
+margin_bottom = 386.0
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 7 )
+expand = true
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="НАЗАД" to="." method="_on__pressed"]

@@ -5,9 +5,9 @@
 [ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=3]
 [ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=4]
 [ext_resource path="res://REVIM.gd" type="Script" id=5]
-[ext_resource path="res://sprite/Монтажная область 1.png" type="Texture" id=6]
+[ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=6]
 [ext_resource path="res://sprite/Arcade.png" type="Texture" id=7]
-[ext_resource path="res://1668940952651.png" type="Texture" id=8]
+[ext_resource path="res://sprite/StoryMode.png" type="Texture" id=8]
 
 [node name="REVIM" type="Control"]
 anchor_right = 1.0
@@ -38,29 +38,30 @@ scale = Vector2( 1.01457, 0.576446 )
 texture = ExtResource( 4 )
 
 [node name="StoryGame" type="TextureButton" parent="."]
-margin_left = 184.0
-margin_top = 132.0
-margin_right = 340.0
-margin_bottom = 288.0
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 6 )
+margin_left = 201.0
+margin_top = 104.0
+margin_right = 418.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="Arcade" type="TextureButton" parent="."]
-margin_left = 457.0
-margin_top = 122.0
-margin_right = 616.0
-margin_bottom = 281.0
+margin_left = 466.0
+margin_top = 109.0
+margin_right = 659.0
+margin_bottom = 302.0
 texture_normal = ExtResource( 7 )
 expand = true
 
 [node name="НАЗАД" type="TextureButton" parent="."]
-margin_left = 740.0
-margin_top = 335.0
-margin_right = 790.0
-margin_bottom = 385.0
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 8 )
+margin_left = 13.0
+margin_top = 306.0
+margin_right = 95.0
+margin_bottom = 388.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+expand = true
 
 [connection signal="pressed" from="StoryGame" to="." method="_on_StoryGame_pressed"]
 [connection signal="pressed" from="Arcade" to="." method="_on_Arcade_pressed"]
