@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://sprite/блоки/background/sky_cloud-export.png" type="Texture" id=1]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://REVIM.gd" type="Script" id=5]
 [ext_resource path="res://sprite/Монтажная область 1.png" type="Texture" id=6]
 [ext_resource path="res://sprite/Arcade.png" type="Texture" id=7]
+[ext_resource path="res://1668940952651.png" type="Texture" id=8]
 
 [node name="REVIM" type="Control"]
 anchor_right = 1.0
@@ -36,13 +37,6 @@ position = Vector2( -33.3982, 243.252 )
 scale = Vector2( 1.01457, 0.576446 )
 texture = ExtResource( 4 )
 
-[node name="Button" type="Button" parent="."]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -100.0
-margin_bottom = 80.0
-text = "EXZIT"
-
 [node name="StoryGame" type="TextureButton" parent="."]
 margin_left = 184.0
 margin_top = 132.0
@@ -60,6 +54,14 @@ margin_bottom = 281.0
 texture_normal = ExtResource( 7 )
 expand = true
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[node name="НАЗАД" type="TextureButton" parent="."]
+margin_left = 740.0
+margin_top = 335.0
+margin_right = 790.0
+margin_bottom = 385.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+
 [connection signal="pressed" from="StoryGame" to="." method="_on_StoryGame_pressed"]
 [connection signal="pressed" from="Arcade" to="." method="_on_Arcade_pressed"]
+[connection signal="pressed" from="НАЗАД" to="." method="_on__pressed"]

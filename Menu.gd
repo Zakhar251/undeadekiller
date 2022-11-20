@@ -9,11 +9,11 @@ func _on_Characters_pressed():
 
 
 func _on_Shop_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://СКОРО.tscn")
 
 
 func _on_Settings_pressed():
-	get_tree().change_scene("res://opsions.tscn")
+	get_tree().change_scene("res://СКОРО.tscn")
 
 
 func _on_Exit_pressed():
