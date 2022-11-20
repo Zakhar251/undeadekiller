@@ -1,32 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=2]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=5]
 [ext_resource path="res://STATS.tscn" type="PackedScene" id=6]
 [ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=7]
-
-[sub_resource type="StreamTexture" id=3]
-flags = 4
-load_path = "res://.import/8.png-884fa4997b2bbd20769e061b5102f82d.stex"
-
-[sub_resource type="StreamTexture" id=4]
-flags = 4
-load_path = "res://.import/9.png-31bc6c48d4502414c4e339fb5e21c672.stex"
-
-[sub_resource type="StreamTexture" id=5]
-flags = 4
-load_path = "res://.import/1668867325103.png-bd03a8a3dffc880c090f6b61e9c8b1e2.stex"
-
-[sub_resource type="StreamTexture" id=6]
-flags = 4
-load_path = "res://.import/1668867254759.png-94f7518d1baaa6d89e093c677c6aca13.stex"
-
-[sub_resource type="GDScript" id=2]
-script/source = "extends Button
-
-
-"
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -60,64 +38,8 @@ texture = ExtResource( 5 )
 position = Vector2( 680, -24 )
 z_as_relative = false
 
-[node name="OPSION" type="Button" parent="."]
-margin_left = 732.0
-margin_top = 331.0
-margin_right = 794.0
-margin_bottom = 387.0
-focus_mode = 1
-custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
-custom_colors/font_color_focus = Color( 0, 0.980392, 1, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0.980392, 1, 1 )
-custom_colors/font_color_pressed = Color( 0, 0.980392, 1, 1 )
-enabled_focus_mode = 1
-keep_pressed_outside = true
-icon = SubResource( 3 )
-
-[node name="QUIT" type="Button" parent="."]
-margin_left = 6.0
-margin_top = 335.0
-margin_right = 68.0
-margin_bottom = 391.0
-keep_pressed_outside = true
-icon = SubResource( 4 )
-
-[node name="Shop" type="Button" parent="."]
-margin_left = 504.0
-margin_top = 141.0
-margin_right = 616.0
-margin_bottom = 247.0
-icon = SubResource( 5 )
-
-[node name="Button" type="Button" parent="."]
-margin_left = 211.0
-margin_top = 144.0
-margin_right = 323.0
-margin_bottom = 250.0
-icon = SubResource( 6 )
-
-[node name="new_game" type="Button" parent="."]
-anchor_left = 0.317
-anchor_top = 0.467
-anchor_right = 0.429
-anchor_bottom = 0.507
-margin_left = 75.181
-margin_top = -74.267
-margin_right = 146.797
-margin_bottom = 65.693
-rect_pivot_offset = Vector2( 56, 56 )
-custom_colors/font_color_disabled = Color( 0, 0.980392, 1, 1 )
-custom_colors/font_color_focus = Color( 0, 0.980392, 1, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
-action_mode = 0
-keep_pressed_outside = true
-script = SubResource( 2 )
-
-[connection signal="pressed" from="OPSION" to="." method="_on_OPSION_pressed"]
-[connection signal="pressed" from="QUIT" to="." method="_on_QUIT_pressed"]
-[connection signal="pressed" from="Shop" to="." method="_on_Magazin_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 331.0
+margin_top = 113.0
+margin_right = 371.0
+margin_bottom = 153.0
