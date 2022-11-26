@@ -11,11 +11,11 @@
 [ext_resource path="res://sprite/Settings.png" type="Texture" id=9]
 [ext_resource path="res://sprite/Shop.png" type="Texture" id=10]
 [ext_resource path="res://sprite/fLATTER2.png" type="Texture" id=11]
-[ext_resource path="res://sprite/BlackSettings.png" type="Texture" id=12]
-[ext_resource path="res://sprite/BlackPlay.png" type="Texture" id=13]
-[ext_resource path="res://sprite/BlackBack.png" type="Texture" id=14]
-[ext_resource path="res://sprite/BlackПерс.png" type="Texture" id=15]
-[ext_resource path="res://sprite/BlackShop.png" type="Texture" id=16]
+[ext_resource path="res://sprite/LittleShop.png" type="Texture" id=12]
+[ext_resource path="res://sprite/LittlePlay.png" type="Texture" id=13]
+[ext_resource path="res://sprite/LittleSettings.png" type="Texture" id=14]
+[ext_resource path="res://sprite/LittleCharacters.png" type="Texture" id=15]
+[ext_resource path="res://sprite/LittleBack.png" type="Texture" id=16]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -64,7 +64,7 @@ margin_top = 310.0
 margin_right = 800.0
 margin_bottom = 395.0
 texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 12 )
+texture_pressed = ExtResource( 14 )
 expand = true
 
 [node name="Characters" type="TextureButton" parent="."]
@@ -82,7 +82,7 @@ margin_top = 317.0
 margin_right = 83.0
 margin_bottom = 390.0
 texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 14 )
+texture_pressed = ExtResource( 16 )
 expand = true
 
 [node name="FLatter2" type="Sprite" parent="."]
@@ -96,7 +96,7 @@ margin_top = 195.0
 margin_right = 600.0
 margin_bottom = 295.0
 texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 16 )
+texture_pressed = ExtResource( 12 )
 expand = true
 
 [connection signal="pressed" from="NewGame" to="." method="_on_NewGame_pressed"]

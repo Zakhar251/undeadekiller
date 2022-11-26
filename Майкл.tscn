@@ -11,7 +11,7 @@
 [ext_resource path="res://sprite/Player Skin1/idle/adventurer-idle-01-export.png" type="Texture" id=9]
 [ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=10]
 [ext_resource path="res://sprite/ВЫБРАТЬ.png" type="Texture" id=11]
-[ext_resource path="res://sprite/BlackBack.png" type="Texture" id=12]
+[ext_resource path="res://sprite/LittleBack.png" type="Texture" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -51,7 +51,7 @@ texture = ExtResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 384, 176 )
 frames = SubResource( 1 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="TextureButton" type="TextureButton" parent="."]

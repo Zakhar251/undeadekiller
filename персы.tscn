@@ -8,8 +8,8 @@
 [ext_resource path="res://персы.gd" type="Script" id=6]
 [ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=7]
 [ext_resource path="res://sprite/Майкл.png" type="Texture" id=8]
-[ext_resource path="res://sprite/BlackМайкл.png" type="Texture" id=9]
-[ext_resource path="res://sprite/BlackBack.png" type="Texture" id=10]
+[ext_resource path="res://sprite/LittleMike.png" type="Texture" id=9]
+[ext_resource path="res://sprite/LittleBack.png" type="Texture" id=10]
 
 [node name="персы" type="Control"]
 anchor_right = 1.0
