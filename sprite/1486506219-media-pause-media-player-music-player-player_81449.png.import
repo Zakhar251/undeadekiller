@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1486506219-media-pause-media-player-music-player-player_81449.png-142c485d0460106cc711ac26a9279a80.stex"
+path="res://.import/1486506219-media-pause-media-player-music-player-player_81449.png-499cae30fee20533a24bc1e95d0aa4c1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/1486506219-media-pause-media-player-music-player-player_81449.png"
-dest_files=[ "res://.import/1486506219-media-pause-media-player-music-player-player_81449.png-142c485d0460106cc711ac26a9279a80.stex" ]
+source_file="res://1486506219-media-pause-media-player-music-player-player_81449.png"
+dest_files=[ "res://.import/1486506219-media-pause-media-player-music-player-player_81449.png-499cae30fee20533a24bc1e95d0aa4c1.stex" ]
 
 [params]
 
