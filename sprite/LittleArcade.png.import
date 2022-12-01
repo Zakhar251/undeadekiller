@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LittleArcade.png-2d093a216eca2ec3433d9d1323cd8b50.stex"
+path="res://.import/LittleArcade.png-790a2fcf071e4fb243909a64b541ecae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LittleArcade.png"
-dest_files=[ "res://.import/LittleArcade.png-2d093a216eca2ec3433d9d1323cd8b50.stex" ]
+source_file="res://sprite/LittleArcade.png"
+dest_files=[ "res://.import/LittleArcade.png-790a2fcf071e4fb243909a64b541ecae.stex" ]
 
 [params]
 

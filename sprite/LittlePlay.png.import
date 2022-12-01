@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LittlePlay.png-71ed497d74f6f01a489387f22496b9bc.stex"
+path="res://.import/LittlePlay.png-4c71464aaea9e66725ce8c7dd735cca5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LittlePlay.png"
-dest_files=[ "res://.import/LittlePlay.png-71ed497d74f6f01a489387f22496b9bc.stex" ]
+source_file="res://sprite/LittlePlay.png"
+dest_files=[ "res://.import/LittlePlay.png-4c71464aaea9e66725ce8c7dd735cca5.stex" ]
 
 [params]
 

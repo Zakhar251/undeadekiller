@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LittleSettings.png-c26f01a2572d5028f8c8e96412116dae.stex"
+path="res://.import/LittleSettings.png-87556b6f99940482c9d401eea4c61498.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LittleSettings.png"
-dest_files=[ "res://.import/LittleSettings.png-c26f01a2572d5028f8c8e96412116dae.stex" ]
+source_file="res://sprite/LittleSettings.png"
+dest_files=[ "res://.import/LittleSettings.png-87556b6f99940482c9d401eea4c61498.stex" ]
 
 [params]
 

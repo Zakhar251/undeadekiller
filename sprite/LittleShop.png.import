@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LittleShop.png-97605bd3eab0d9d1a5f86fb0384d9038.stex"
+path="res://.import/LittleShop.png-69355711852d4dcf45ce608451409807.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://LittleShop.png"
-dest_files=[ "res://.import/LittleShop.png-97605bd3eab0d9d1a5f86fb0384d9038.stex" ]
+source_file="res://sprite/LittleShop.png"
+dest_files=[ "res://.import/LittleShop.png-69355711852d4dcf45ce608451409807.stex" ]
 
 [params]
 
