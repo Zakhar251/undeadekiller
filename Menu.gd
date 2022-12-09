@@ -1,7 +1,18 @@
 extends Control
+var time_begin
+var time_delay
+
+
+func _ready():
+	$Player.play()
+	
+
+
+
 
 func _on_NewGame_pressed():
 	 get_tree().change_scene("res://REVIM.tscn")
+	
 
 
 func _on_Characters_pressed():

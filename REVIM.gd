@@ -1,5 +1,8 @@
 extends Control
 
+func _ready():
+	$muz.play()
+	
 func _on_StoryGame_pressed():
 	get_tree().change_scene("res://main.tscn")
 

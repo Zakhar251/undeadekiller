@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/chris-haugen-campfire-song.mp3-c05aa672239c61d749c435c7c040b20d.mp3str"
+
+[deps]
+
+source_file="res://muz/chris-haugen-campfire-song.mp3"
+dest_files=[ "res://.import/chris-haugen-campfire-song.mp3-c05aa672239c61d749c435c7c040b20d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

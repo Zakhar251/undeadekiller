@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/untitled.mp3-d560b66b38d6f0ae198a7a2aa6050b35.mp3str"
+
+[deps]
+
+source_file="res://muz/untitled.mp3"
+dest_files=[ "res://.import/untitled.mp3-d560b66b38d6f0ae198a7a2aa6050b35.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

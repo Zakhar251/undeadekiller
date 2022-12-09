@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mechanic-button-pressing_fj_hbhno.mp3-612d22efc1374a4807f207e7e48fcd51.mp3str"
+
+[deps]
+
+source_file="res://muz/mechanic-button-pressing_fj_hbhno.mp3"
+dest_files=[ "res://.import/mechanic-button-pressing_fj_hbhno.mp3-612d22efc1374a4807f207e7e48fcd51.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

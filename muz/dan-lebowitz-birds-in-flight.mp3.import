@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dan-lebowitz-birds-in-flight.mp3-0438fc126c11067b05154b849bd9eb5d.mp3str"
+
+[deps]
+
+source_file="res://muz/dan-lebowitz-birds-in-flight.mp3"
+dest_files=[ "res://.import/dan-lebowitz-birds-in-flight.mp3-0438fc126c11067b05154b849bd9eb5d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
