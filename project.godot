@@ -12,8 +12,8 @@ config_version=4
 
 config/name="undead killer "
 run/main_scene="res://Menu.tscn"
-boot_splash/image="res://sprite/Flatt.png"
-boot_splash/bg_color=Color( 0.117647, 0.211765, 1, 1 )
+boot_splash/image="res://sprite/maxresdefault.png"
+boot_splash/bg_color=Color( 1, 1, 1, 1 )
 config/icon="res://sprite/LittleMike.png"
 
 [display]

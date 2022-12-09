@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/maxresdefault.jpg-e3c4ab6552ade8fc447cfd43abd55d7e.stex"
+path="res://.import/maxresdefault.png-52e419e5d448dc7f1a76f616d9784ab4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/maxresdefault.jpg"
-dest_files=[ "res://.import/maxresdefault.jpg-e3c4ab6552ade8fc447cfd43abd55d7e.stex" ]
+source_file="res://sprite/maxresdefault.png"
+dest_files=[ "res://.import/maxresdefault.png-52e419e5d448dc7f1a76f616d9784ab4.stex" ]
 
 [params]
 
