@@ -16,6 +16,10 @@ boot_splash/image="res://sprite/maxresdefault.png"
 boot_splash/bg_color=Color( 1, 1, 1, 1 )
 config/icon="res://sprite/LittleMike.png"
 
+[autoload]
+
+GlobalAudioStreamPlayer="*res://AudioStreamPlayer.tscn"
+
 [display]
 
 window/size/width=800

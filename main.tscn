@@ -12,7 +12,7 @@
 [ext_resource path="res://STATS.tscn" type="PackedScene" id=10]
 [ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=11]
 [ext_resource path="res://NPC.tscn" type="PackedScene" id=12]
-[ext_resource path="res://muz/untitled.mp3" type="AudioStream" id=13]
+[ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=13]
 [ext_resource path="res://sprite/LittleBack.png" type="Texture" id=14]
 [ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=15]
 
@@ -695,9 +695,11 @@ position = Vector2( 5520, 136 )
 position = Vector2( 6136, 392 )
 rotation = 0.00559583
 
-[node name="Player2" type="AudioStreamPlayer" parent="."]
+[node name="BUTTON" type="AudioStreamPlayer" parent="." groups=["кнопка"]]
 stream = ExtResource( 13 )
-volume_db = -20.139
+__meta__ = {
+"_editor_description_": ""
+}
 
 [connection signal="pressed" from="CONTROL/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="CONTROL/Exit" to="." method="_on_Exit_pressed"]

@@ -11,12 +11,12 @@
 [ext_resource path="res://sprite/LittleStoryMode.png" type="Texture" id=9]
 [ext_resource path="res://sprite/LittleArcade.png" type="Texture" id=10]
 [ext_resource path="res://sprite/LittleBack.png" type="Texture" id=11]
-[ext_resource path="res://muz/chris-haugen-campfire-song.mp3" type="AudioStream" id=12]
+[ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=12]
 
 [node name="REVIM" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( -479, -243 )
+rect_pivot_offset = Vector2( -797, -446 )
 script = ExtResource( 5 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -68,9 +68,11 @@ texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 11 )
 expand = true
 
-[node name="muz" type="AudioStreamPlayer" parent="."]
+[node name="BUTTON" type="AudioStreamPlayer" parent="." groups=["кнопка"]]
 stream = ExtResource( 12 )
-volume_db = -5.714
+__meta__ = {
+"_editor_description_": ""
+}
 
 [connection signal="pressed" from="StoryGame" to="." method="_on_StoryGame_pressed"]
 [connection signal="pressed" from="Arcade" to="." method="_on_Arcade_pressed"]

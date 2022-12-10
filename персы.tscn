@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=1]
 [ext_resource path="res://sprite/блоки/background/sky_cloud-export.png" type="Texture" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://sprite/Майкл.png" type="Texture" id=8]
 [ext_resource path="res://sprite/LittleMike.png" type="Texture" id=9]
 [ext_resource path="res://sprite/LittleBack.png" type="Texture" id=10]
-[ext_resource path="res://muz/chris-haugen-campfire-song.mp3" type="AudioStream" id=11]
 
 [node name="персы" type="Control"]
 anchor_right = 1.0
@@ -61,9 +60,6 @@ margin_bottom = 390.0
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 10 )
 expand = true
-
-[node name="Player" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
 
 [connection signal="pressed" from="Maйкл" to="." method="_on_Ma_pressed"]
 [connection signal="pressed" from="НАЗАД" to="." method="_on__pressed"]

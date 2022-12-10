@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://opsions.gd" type="Script" id=1]
 [ext_resource path="res://sprite/блоки/background/sky_cloud-export.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=4]
 [ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=5]
 [ext_resource path="res://sprite/блоки/управление/скоро1.png" type="Texture" id=6]
+[ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=7]
 
 [node name="opsions" type="Control"]
 anchor_right = 1.0
@@ -45,5 +46,11 @@ text = "EXZIT"
 position = Vector2( 456, 200 )
 scale = Vector2( 0.212963, 0.212963 )
 texture = ExtResource( 6 )
+
+[node name="BUTTON" type="AudioStreamPlayer" parent="." groups=["кнопка"]]
+stream = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

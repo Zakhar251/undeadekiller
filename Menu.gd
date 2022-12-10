@@ -3,8 +3,7 @@ var time_begin
 var time_delay
 
 
-func _ready():
-	$Player.play()
+
 	
 
 
@@ -32,5 +31,4 @@ func _on_Settings_pressed():
 
 
 func _on_Exit_pressed():
-	$BUTTON.play()
 	get_tree().quit()
