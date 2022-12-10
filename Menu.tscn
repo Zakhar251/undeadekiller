@@ -101,11 +101,15 @@ texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 12 )
 expand = true
 
-[node name="BUTTON" type="AudioStreamPlayer" parent="."]
+[node name="BUTTON" type="AudioStreamPlayer" parent="." groups=["кнопка"]]
 stream = ExtResource( 18 )
+__meta__ = {
+"_editor_description_": ""
+}
 
-[node name="Player" type="AudioStreamPlayer" parent="."]
+[node name="Player" type="AudioStreamPlayer" parent="." groups=["фоновая музыка"]]
 stream = ExtResource( 17 )
+volume_db = -20.139
 
 [connection signal="pressed" from="NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]

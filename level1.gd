@@ -5,6 +5,7 @@ func _process(delta):
 	   
 func _ready():
 	$Player2.play()
+	
 
 	
 
