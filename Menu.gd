@@ -4,11 +4,6 @@ var time_delay
 
 
 
-	
-
-
-
-
 func _on_NewGame_pressed():
 	$BUTTON.play()
 	get_tree().change_scene("res://REVIM.tscn")

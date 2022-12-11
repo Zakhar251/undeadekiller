@@ -13,36 +13,26 @@ var damage = 1
 var coins = 0
 var skin = 0
 var jump = 2
-
-
 var vel = Vector2()
 
 
 
-func skin():
-	pass
-
 
 func _physics_process(delta):
-					
 	if position.y >= 550:
 		get_tree().reload_current_scene()
 	
 	if Input.is_action_pressed("attac"):
-		
 		$Animate228.play("swing")
 	
 		
 	if Input.is_action_pressed("left"):		
-		
 		vel.x = -speed
 		$Sprite.flip_h = true and ($Sprite.position.x) +16
 		$Weapon.position.x = abs($Weapon.position.x) * -1
-		
 		$Sprite.play("run") and is_on_floor()
 	
 	elif Input.is_action_pressed("rigth"):
-		
 		vel.x = +speed
 		$Sprite.flip_h = false
 		$Weapon.position.x = abs($Weapon.position.x) * 1
@@ -55,30 +45,18 @@ func _physics_process(delta):
 		$Sprite.play( )
 		
 	else:
-		
 		$Sprite.play('jump2')
+		
 	if vel.y < 0:
 		$Sprite.play("jump")
-		
-		
-	
-	
-		
-	
+
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 	
 		vel.y = -jumpForce
-		
 	
-		
-		
-		
 	if vel:
 		vel = move_and_slide(vel)
 	vel.y += gravity * delta
-	
-	
-		
 		
 	vel = move_and_slide(vel, Vector2.UP)	
 	

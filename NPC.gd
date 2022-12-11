@@ -19,8 +19,8 @@ func handle_hit(damage: int):
 	print("enemy was hit! current health:" + str(hp))
 	if hp <1:
 		is_alive = false
-		vel.x = 0		
-		$Area2D/AnimationPlayer.play("death")
+		vel.x = 0
+		$Area2D/AnimationPlayer.play("death")		
 		
 func _der():
 		der *= -1
@@ -40,3 +40,5 @@ func _physics_process(delta):
 func _on_Goblin_animation_finished():
 	if $Goblin.animation == "death":
 		queue_free() 
+
+

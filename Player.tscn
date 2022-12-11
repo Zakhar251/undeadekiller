@@ -23,6 +23,11 @@
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 12 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "attac",
@@ -143,7 +148,7 @@ script = ExtResource( 2 )
 position = Vector2( 31.25, -10 )
 scale = Vector2( 0.344248, 0.344248 )
 frames = SubResource( 3 )
-animation = "jump"
+animation = "attac"
 flip_h = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
