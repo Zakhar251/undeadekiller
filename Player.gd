@@ -59,13 +59,16 @@ func _physics_process(delta):
 	vel.y += gravity * delta
 		
 	vel = move_and_slide(vel, Vector2.UP)	
-	
 
 func add_coin():
 	coins += 1 
 	print(coins)
 
-
+func kill():
+	hp -= damage
+	print("hp:",hp)
+	if hp < 1:
+		get_tree().reload_current_scene()
 
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://.tres" type="TileSet" id=2]
@@ -15,6 +15,37 @@
 [ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=13]
 [ext_resource path="res://sprite/LittleBack.png" type="Texture" id=14]
 [ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=15]
+[ext_resource path="res://Camera2D2.gd" type="Script" id=16]
+
+[sub_resource type="Animation" id=1]
+resource_name = "defolt"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 27.5, -20 ), Vector2( 27.5, -20 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "gg"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 27.5, -20 ), Vector2( 17.5, -53.75 ), Vector2( 21.25, -17.5 ) ]
+}
 
 [node name="level 1" type="Node2D"]
 z_as_relative = false
@@ -628,6 +659,7 @@ texture = ExtResource( 7 )
 position = Vector2( 439, 216 )
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
+position = Vector2( 20, -21.25 )
 rotating = true
 current = true
 process_mode = 0
@@ -635,6 +667,12 @@ limit_left = 336
 limit_top = -100000
 limit_right = 6584
 limit_bottom = 570
+editor_draw_limits = true
+script = ExtResource( 16 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Camera2D2"]
+anims/defolt = SubResource( 1 )
+anims/gg = SubResource( 2 )
 
 [node name="CONTROL" type="CanvasLayer" parent="."]
 
