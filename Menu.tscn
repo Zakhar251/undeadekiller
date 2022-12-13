@@ -1,11 +1,10 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=2]
 [ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=3]
 [ext_resource path="res://sprite/play_button_icon_129542.png" type="Texture" id=4]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=5]
-[ext_resource path="res://STATS.tscn" type="PackedScene" id=6]
 [ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=7]
 [ext_resource path="res://sprite/Перс.png" type="Texture" id=8]
 [ext_resource path="res://sprite/Settings.png" type="Texture" id=9]
@@ -71,15 +70,6 @@ texture = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="STATS" parent="StaticBody2D" instance=ExtResource( 6 )]
-position = Vector2( 680, -24 )
-z_as_relative = false
 
 [node name="NewGame" type="TextureButton" parent="."]
 margin_left = 325.0

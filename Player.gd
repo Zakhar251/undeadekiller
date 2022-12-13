@@ -69,6 +69,11 @@ func kill():
 	print("hp:",hp)
 	if hp < 1:
 		get_tree().reload_current_scene()
+		
+	
+		
 
-
+		
+		
+		
 

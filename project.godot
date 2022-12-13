@@ -19,6 +19,7 @@ config/icon="res://sprite/LittleMike.png"
 [autoload]
 
 GlobalAudioStreamPlayer="*res://AudioStreamPlayer.tscn"
+Fs="*res://script/save.gd"
 
 [display]
 
