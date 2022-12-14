@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 170
+var speed = 120
 onready var hp = 5
 export var max_hp = 5
 var jumpForce = 270
@@ -70,10 +70,12 @@ func kill():
 	if hp < 1:
 		get_tree().reload_current_scene()
 		
-	
-		
 
-		
-		
-		
+func add_hp():
+	if hp == max_hp:
+		hp += 0
+	else:
+		hp += 1
+	
+			
 

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED =75
+const SPEED =70
 const GRAVITY = 100
 const FLOOR = Vector2(0 , -1)
 onready var hp = 30
@@ -36,8 +36,6 @@ func _physics_process(delta):
 		_der()
 
 func _on_Goblin_animation_finished():
-
-		
 	if $Goblin.animation == "death":
 		queue_free() 
 	if $Goblin.animation == "attac":
@@ -47,7 +45,17 @@ func _on_Goblin_animation_finished():
 func _on_attace_body_entered(body):
 	if body.name == "Player":
 		is_attac = true
-		vel.x = 0
 		$Goblin.play("attac")
+		vel.x = 0
 		body.kill()
+		
+		
 	
+
+
+func _on_Area2D2_body_entered(body):
+	if body.name == "Player":
+		is_attac = true
+		vel.x = 0 
+		$Goblin.play("attac")
+		

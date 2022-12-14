@@ -6,8 +6,8 @@
 [node name="STATS" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 80, 48 )
-scale = Vector2( 0.251592, 0.251592 )
+position = Vector2( 89, 46 )
+scale = Vector2( 0.134952, 0.134952 )
 texture = ExtResource( 2 )
 normal_map = ExtResource( 1 )
 region_enabled = true

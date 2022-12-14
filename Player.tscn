@@ -138,7 +138,7 @@ tracks/2/keys = {
 resource_name = "swing2"
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 28.8692, 52.7233 )
+extents = Vector2( 39.3228, 52.7233 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 27.5, 48.125 )
@@ -180,7 +180,7 @@ scale = Vector2( 1.24176, 0.957239 )
 script = ExtResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon"]
-position = Vector2( 12.0796, -32.646 )
+position = Vector2( 21.17, -32.646 )
 scale = Vector2( 0.869595, 1 )
 shape = SubResource( 4 )
 disabled = true
