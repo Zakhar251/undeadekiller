@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Dance to My Tune - Marc Torch.mp3-96fd7c43266d4e23ba6f3ca41af21ff7.mp3str"
+
+[deps]
+
+source_file="res://muz/ES_Dance to My Tune - Marc Torch.mp3"
+dest_files=[ "res://.import/ES_Dance to My Tune - Marc Torch.mp3-96fd7c43266d4e23ba6f3ca41af21ff7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
