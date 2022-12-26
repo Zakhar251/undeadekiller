@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var speed = 120
-onready var hp = 5
+onready var hp = 99
 export var max_hp = 5
 var jumpForce = 270
 var gravity = 500
@@ -61,6 +61,7 @@ func _physics_process(delta):
 	vel = move_and_slide(vel, Vector2.UP)	
 
 func add_coin():
+	Global.kybk()
 	coins += 1 
 	print(coins)
 

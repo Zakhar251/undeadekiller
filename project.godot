@@ -20,6 +20,7 @@ config/icon="res://sprite/hp/1671386038609.png"
 
 GlobalAudioStreamPlayer="*res://AudioStreamPlayer.tscn"
 Fs="*res://script/save.gd"
+Global="*res://globalclass.gd"
 
 [display]
 

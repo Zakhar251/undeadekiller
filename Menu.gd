@@ -2,7 +2,8 @@ extends Control
 var time_begin
 var time_delay
 
-
+func _process(delta):
+	$Control/Label.text = str(Global.kybki)
 
 func _on_NewGame_pressed():
 	$BUTTON.play()

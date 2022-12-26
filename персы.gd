@@ -2,12 +2,11 @@ extends Control
 
 var pers = 1
 
-
+func _process(delta):
+	$Label.text = str(Global.pers)
 
 func per():
-	if pers < 66:
-		pers = pers + 1
-		$Label.text = str(pers)
+	Global.person()
 
 func _on__pressed():
 	get_tree().change_scene("res://Menu.tscn")

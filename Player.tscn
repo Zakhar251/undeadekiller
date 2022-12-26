@@ -146,6 +146,7 @@ extents = Vector2( 27.5, 48.125 )
 [node name="Player" type="KinematicBody2D" groups=["Persist"]]
 light_mask = 0
 scale = Vector2( 0.8, 0.8 )
+collision_layer = 4
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

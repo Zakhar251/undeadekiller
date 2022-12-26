@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://sprite/Перс.png" type="Texture" id=8]
 [ext_resource path="res://sprite/Settings.png" type="Texture" id=9]
 [ext_resource path="res://sprite/Shop.png" type="Texture" id=10]
+[ext_resource path="res://kybki.tscn" type="PackedScene" id=11]
 [ext_resource path="res://sprite/LittleShop.png" type="Texture" id=12]
 [ext_resource path="res://кнопки/Sprite-0002.png" type="Texture" id=13]
 [ext_resource path="res://sprite/LittleSettings.png" type="Texture" id=14]
@@ -99,10 +100,10 @@ __meta__ = {
 }
 
 [node name="NewGame" type="TextureButton" parent="."]
-margin_left = -28.0
-margin_top = -1.99698
-margin_right = 259.0
-margin_bottom = 97.003
+margin_left = 266.0
+margin_top = 51.9216
+margin_right = 553.0
+margin_bottom = 150.922
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 13 )
 expand = true
@@ -148,6 +149,12 @@ stream = ExtResource( 18 )
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="Control" parent="." instance=ExtResource( 11 )]
+margin_left = 188.0
+margin_top = 262.603
+margin_right = 188.0
+margin_bottom = 262.603
 
 [connection signal="pressed" from="NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]

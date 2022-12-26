@@ -295,6 +295,7 @@ tracks/1/keys = {
 extents = Vector2( 117, 41 )
 
 [node name="NPC_ARCADE228" type="KinematicBody2D"]
+collision_layer = 4
 script = ExtResource( 1 )
 
 [node name="Goblin" type="AnimatedSprite" parent="."]

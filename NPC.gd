@@ -48,21 +48,5 @@ func _on_attace_body_entered(body):
 	if body.name == "Player":
 		is_attac = true
 		vel.x = 0
-		$Timer.start(0.5)
 		$Goblin.play("attac")
 		body.kill()
-		
-		
-
-
-
-
-		
-
-
-
-
-
-func _on_Timer_timeout():
-	$Goblin.play("attac")
-	_on_attace_body_entered()

@@ -296,6 +296,7 @@ extents = Vector2( 118, 37.5 )
 
 [node name="NPC" type="KinematicBody2D"]
 position = Vector2( -264, -120 )
+collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -350,4 +351,5 @@ one_shot = true
 [connection signal="animation_finished" from="Goblin" to="." method="_on_Goblin_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="attace" to="." method="_on_attace_body_entered"]
+[connection signal="body_shape_entered" from="attace" to="." method="_on_attace_body_shape_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
