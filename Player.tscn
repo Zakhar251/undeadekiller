@@ -21,6 +21,13 @@
 [ext_resource path="res://sprite/Player Skin1/attack/adventurer-attack2-03-export.png" type="Texture" id=19]
 [ext_resource path="res://muz/19557.mp3" type="AudioStream" id=20]
 
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 20.0
+height = 12.5
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32.5, 28.9141 )
+
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [  ],
@@ -58,13 +65,6 @@ animations = [ {
 "name": "run",
 "speed": 8.0
 } ]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 32.5, 28.9141 )
-
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 20.0
-height = 12.5
 
 [sub_resource type="Animation" id=7]
 resource_name = "jump28"
@@ -138,30 +138,31 @@ tracks/2/keys = {
 resource_name = "swing2"
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 39.3228, 52.7233 )
+extents = Vector2( 42.2168, 52.7233 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 27.5, 48.125 )
 
 [node name="Player" type="KinematicBody2D" groups=["Persist"]]
+light_mask = 0
 scale = Vector2( 0.8, 0.8 )
 script = ExtResource( 2 )
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 31.25, -10 )
-scale = Vector2( 0.344248, 0.344248 )
-frames = SubResource( 3 )
-animation = "jump"
-flip_h = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 21.25, -30 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( 28.75, 22.664 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 21.25, -30 )
-shape = SubResource( 1 )
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 31.25, -10 )
+scale = Vector2( 0.344248, 0.344248 )
+frames = SubResource( 3 )
+animation = "attac"
+flip_h = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( 22.5, 37.5 )
@@ -180,7 +181,7 @@ scale = Vector2( 1.24176, 0.957239 )
 script = ExtResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon"]
-position = Vector2( 21.17, -32.646 )
+position = Vector2( 23.6866, -32.646 )
 scale = Vector2( 0.869595, 1 )
 shape = SubResource( 4 )
 disabled = true

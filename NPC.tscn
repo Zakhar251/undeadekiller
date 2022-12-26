@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://sprite/гоблин/death/Death-export.png" type="Texture" id=1]
 [ext_resource path="res://NPC.gd" type="Script" id=2]
@@ -259,41 +259,47 @@ extents = Vector2( 28, 36 )
 resource_name = "attac"
 length = 0.8
 tracks/0/type = "value"
-tracks/0/path = NodePath("../Goblin:animation")
+tracks/0/path = NodePath("../Goblin:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.8 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ "attac", "attac" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../Goblin:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 5, 6, 7 ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "hit"
+}, {
+"args": [  ],
+"method": "end_of_hit"
+}, {
+"args": [  ],
+"method": "start_walk"
+} ]
+}
 
 [sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 46.5, 31.5625 )
-
-[sub_resource type="RectangleShape2D" id=47]
-extents = Vector2( 127.5, 40.5 )
+extents = Vector2( 118, 37.5 )
 
 [node name="NPC" type="KinematicBody2D"]
 position = Vector2( -264, -120 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 0
 position = Vector2( 265, 125 )
 shape = SubResource( 1 )
 
@@ -306,11 +312,10 @@ shape = SubResource( 2 )
 [node name="BiteColdown" type="Timer" parent="."]
 
 [node name="Goblin" type="AnimatedSprite" parent="."]
-position = Vector2( 264, 104 )
+position = Vector2( 268, 103 )
 scale = Vector2( 0.229917, 0.229917 )
 frames = SubResource( 23 )
-animation = "take hit"
-frame = 3
+animation = "attac"
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -320,7 +325,7 @@ anims/death = SubResource( 26 )
 anims/hp = SubResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 264, 124 )
+position = Vector2( 264, 128 )
 shape = SubResource( 24 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -328,19 +333,16 @@ root_node = NodePath("../attace")
 anims/attac = SubResource( 36 )
 
 [node name="attace" type="Area2D" parent="."]
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attace"]
-position = Vector2( 261, 120 )
+position = Vector2( 269, 124.5 )
 shape = SubResource( 27 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Area2D2" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 260.5, 113.5 )
-shape = SubResource( 47 )
+[node name="Timer2" type="Timer" parent="."]
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_Hitbox_area_exited"]
@@ -349,4 +351,3 @@ shape = SubResource( 47 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="attace" to="." method="_on_attace_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]

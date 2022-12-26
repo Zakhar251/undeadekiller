@@ -1,32 +1,62 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=2]
 [ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=3]
-[ext_resource path="res://sprite/play_button_icon_129542.png" type="Texture" id=4]
+[ext_resource path="res://кнопки/Sprite-0001.png" type="Texture" id=4]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=5]
+[ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=6]
 [ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=7]
 [ext_resource path="res://sprite/Перс.png" type="Texture" id=8]
 [ext_resource path="res://sprite/Settings.png" type="Texture" id=9]
 [ext_resource path="res://sprite/Shop.png" type="Texture" id=10]
-[ext_resource path="res://sprite/fLATTER2.png" type="Texture" id=11]
 [ext_resource path="res://sprite/LittleShop.png" type="Texture" id=12]
-[ext_resource path="res://sprite/LittlePlay.png" type="Texture" id=13]
+[ext_resource path="res://кнопки/Sprite-0002.png" type="Texture" id=13]
 [ext_resource path="res://sprite/LittleSettings.png" type="Texture" id=14]
 [ext_resource path="res://sprite/LittleCharacters.png" type="Texture" id=15]
 [ext_resource path="res://sprite/LittleBack.png" type="Texture" id=16]
-[ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=17]
+[ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=17]
 [ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=18]
-[ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=19]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 7.0
-margin_bottom = 1.0
+margin_left = -2.0
+margin_top = -2.0
+margin_right = 5.0
+margin_bottom = -1.0
+rect_scale = Vector2( 1, 1.00151 )
 script = ExtResource( 1 )
 
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="Sky-export" type="Sprite" parent="StaticBody2D3"]
+position = Vector2( 407, 142.438 )
+scale = Vector2( 0.125948, 0.137855 )
+texture = ExtResource( 2 )
+
+[node name="Mountain2-export" type="Sprite" parent="StaticBody2D3"]
+position = Vector2( 400, 265 )
+scale = Vector2( 0.12064, 0.156496 )
+texture = ExtResource( 5 )
+
+[node name="Pine1-export" type="Sprite" parent="StaticBody2D3"]
+position = Vector2( 417, 360 )
+scale = Vector2( 0.119767, 0.0976353 )
+texture = ExtResource( 6 )
+
+[node name="Pine2-export" type="Sprite" parent="StaticBody2D3"]
+position = Vector2( 408, 394 )
+scale = Vector2( 0.121512, 0.0562814 )
+texture = ExtResource( 17 )
+
+[node name="Cloud-export" type="Sprite" parent="StaticBody2D3"]
+position = Vector2( 407, 115 )
+scale = Vector2( 0.120702, 0.120702 )
+texture = ExtResource( 7 )
+
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
+visible = false
 __meta__ = {
 "_edit_lock_": true
 }
@@ -40,60 +70,57 @@ __meta__ = {
 }
 
 [node name="Mountain2-export" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 400, 265 )
+position = Vector2( 400, 212 )
 scale = Vector2( 0.12064, 0.156496 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
+
+[node name="Pine2-export" type="Sprite" parent="StaticBody2D2"]
+position = Vector2( 397, 328 )
+scale = Vector2( 0.119739, 0.0906116 )
+texture = ExtResource( 17 )
 
 [node name="Pine1-export" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 417, 360 )
-scale = Vector2( 0.119767, 0.0976353 )
+position = Vector2( 378, 361 )
+scale = Vector2( 0.114432, 0.075169 )
+texture = ExtResource( 6 )
+
+[node name="Cloud-export2" type="Sprite" parent="StaticBody2D2"]
+position = Vector2( 405, 95 )
+scale = Vector2( 0.133456, 0.133456 )
+texture = ExtResource( 7 )
+
+[node name="Cloud-export" type="Sprite" parent="StaticBody2D2"]
+visible = false
+position = Vector2( 407, 115 )
+scale = Vector2( 0.120702, 0.120702 )
 texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Pine2-export" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 408, 394 )
-scale = Vector2( 0.121512, 0.0562814 )
-texture = ExtResource( 19 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Cloud-export" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 407, 115 )
-scale = Vector2( 0.120702, 0.120702 )
-texture = ExtResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="NewGame" type="TextureButton" parent="."]
-margin_left = 325.0
-margin_top = 167.0
-margin_right = 475.0
-margin_bottom = 317.0
+margin_left = -28.0
+margin_top = -1.99698
+margin_right = 259.0
+margin_bottom = 97.003
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 13 )
 expand = true
 
 [node name="Settings" type="TextureButton" parent="."]
-margin_left = 715.0
-margin_top = 310.0
-margin_right = 800.0
-margin_bottom = 395.0
+margin_left = 696.0
+margin_top = 305.539
+margin_right = 781.0
+margin_bottom = 390.539
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 14 )
 expand = true
 
 [node name="Characters" type="TextureButton" parent="."]
-margin_left = 200.0
-margin_top = 195.0
-margin_right = 300.0
-margin_bottom = 295.0
+margin_left = -6.0
+margin_top = 199.698
+margin_right = 94.0
+margin_bottom = 299.698
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 15 )
 expand = true
@@ -107,16 +134,11 @@ texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 16 )
 expand = true
 
-[node name="FLatter2" type="Sprite" parent="."]
-position = Vector2( 401, 127 )
-scale = Vector2( 0.563, 0.563 )
-texture = ExtResource( 11 )
-
 [node name="Shop" type="TextureButton" parent="."]
-margin_left = 500.0
-margin_top = 195.0
-margin_right = 600.0
-margin_bottom = 295.0
+margin_left = -2.0
+margin_top = 100.848
+margin_right = 98.0
+margin_bottom = 200.848
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 12 )
 expand = true

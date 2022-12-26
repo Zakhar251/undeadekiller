@@ -11,7 +11,9 @@ var damage = 1
 var is_alive = true
 var is_attac = false
 var is_dam = false
-onready var timer = $Timer
+
+
+
 
 	
 func handle_hit(damage: int):
@@ -45,17 +47,22 @@ func _on_Goblin_animation_finished():
 func _on_attace_body_entered(body):
 	if body.name == "Player":
 		is_attac = true
-		$Goblin.play("attac")
 		vel.x = 0
+		$Timer.start(0.5)
+		$Goblin.play("attac")
 		body.kill()
 		
 		
-	
 
 
-func _on_Area2D2_body_entered(body):
-	if body.name == "Player":
-		is_attac = true
-		vel.x = 0 
-		$Goblin.play("attac")
+
+
 		
+
+
+
+
+
+func _on_Timer_timeout():
+	$Goblin.play("attac")
+	_on_attace_body_entered()

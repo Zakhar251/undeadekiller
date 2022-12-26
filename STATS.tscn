@@ -1,21 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://sprite/MonedaD.png" type="Texture" id=1]
 [ext_resource path="res://sprite/MonedaD — копия-export.png" type="Texture" id=2]
+[ext_resource path="res://ШРИФТ/new_dynamicfont.tres" type="DynamicFont" id=3]
 
 [node name="STATS" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 89, 46 )
-scale = Vector2( 0.134952, 0.134952 )
+position = Vector2( 86, 39 )
+scale = Vector2( 0.240744, 0.240744 )
 texture = ExtResource( 2 )
 normal_map = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 167.297, 157.771 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 104.0
-margin_top = 40.0
-margin_right = 162.0
-margin_bottom = 64.0
+margin_left = 107.0
+margin_top = 16.0
+margin_right = 185.0
+margin_bottom = 82.0
+custom_fonts/font = ExtResource( 3 )
 text = "0"

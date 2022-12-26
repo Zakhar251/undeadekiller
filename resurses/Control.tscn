@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ШРИФТ/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Control.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 312.0
+margin_top = 150.0
+margin_right = 447.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 1 )
+text = "SAVE"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
