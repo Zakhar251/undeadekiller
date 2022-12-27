@@ -18,7 +18,7 @@ func _on_Characters_pressed():
 
 func _on_Shop_pressed():
 	$BUTTON.play()
-	get_tree().change_scene("res://СКОРО.tscn")
+	get_tree().change_scene("res://SHOP.tscn")
 
 
 func _on_Settings_pressed():

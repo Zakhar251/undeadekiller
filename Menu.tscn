@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=2]
@@ -18,6 +18,8 @@
 [ext_resource path="res://sprite/LittleBack.png" type="Texture" id=16]
 [ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=17]
 [ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=18]
+[ext_resource path="res://sprite/MonedaD.png" type="Texture" id=19]
+[ext_resource path="res://sprite/MonedaD — копия-export.png" type="Texture" id=20]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -101,9 +103,9 @@ __meta__ = {
 
 [node name="NewGame" type="TextureButton" parent="."]
 margin_left = 266.0
-margin_top = 51.9216
+margin_top = 124.812
 margin_right = 553.0
-margin_bottom = 150.922
+margin_bottom = 223.812
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 13 )
 expand = true
@@ -118,10 +120,10 @@ texture_pressed = ExtResource( 14 )
 expand = true
 
 [node name="Characters" type="TextureButton" parent="."]
-margin_left = -6.0
-margin_top = 199.698
-margin_right = 94.0
-margin_bottom = 299.698
+margin_left = 151.0
+margin_top = 129.804
+margin_right = 251.0
+margin_bottom = 229.804
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 15 )
 expand = true
@@ -136,10 +138,10 @@ texture_pressed = ExtResource( 16 )
 expand = true
 
 [node name="Shop" type="TextureButton" parent="."]
-margin_left = -2.0
-margin_top = 100.848
-margin_right = 98.0
-margin_bottom = 200.848
+margin_left = 671.0
+margin_top = 144.781
+margin_right = 771.0
+margin_bottom = 244.781
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 12 )
 expand = true
@@ -151,10 +153,18 @@ __meta__ = {
 }
 
 [node name="Control" parent="." instance=ExtResource( 11 )]
-margin_left = 188.0
-margin_top = 262.603
-margin_right = 188.0
-margin_bottom = 262.603
+margin_left = 277.0
+margin_top = -25.0
+margin_right = 277.0
+margin_bottom = -328.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 425, 41.9367 )
+scale = Vector2( 0.240744, 0.240744 )
+texture = ExtResource( 20 )
+normal_map = ExtResource( 19 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 167.297, 157.771 )
 
 [connection signal="pressed" from="NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]
