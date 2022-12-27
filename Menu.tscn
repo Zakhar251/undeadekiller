@@ -3,7 +3,7 @@
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=2]
 [ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=3]
-[ext_resource path="res://кнопки/Sprite-0001.png" type="Texture" id=4]
+[ext_resource path="res://sprite/play_button_icon_129542.png" type="Texture" id=4]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=5]
 [ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=6]
 [ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=7]
@@ -24,9 +24,9 @@
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -2.0
+margin_left = -5.0
 margin_top = -2.0
-margin_right = 5.0
+margin_right = 2.0
 margin_bottom = -1.0
 rect_scale = Vector2( 1, 1.00151 )
 script = ExtResource( 1 )
@@ -102,10 +102,10 @@ __meta__ = {
 }
 
 [node name="NewGame" type="TextureButton" parent="."]
-margin_left = 266.0
-margin_top = 124.812
-margin_right = 553.0
-margin_bottom = 223.812
+margin_left = 330.0
+margin_top = 113.0
+margin_right = 465.0
+margin_bottom = 250.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 13 )
 expand = true
@@ -120,10 +120,10 @@ texture_pressed = ExtResource( 14 )
 expand = true
 
 [node name="Characters" type="TextureButton" parent="."]
-margin_left = 151.0
-margin_top = 129.804
-margin_right = 251.0
-margin_bottom = 229.804
+margin_left = 176.0
+margin_top = 124.812
+margin_right = 276.0
+margin_bottom = 224.812
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 15 )
 expand = true
@@ -138,10 +138,10 @@ texture_pressed = ExtResource( 16 )
 expand = true
 
 [node name="Shop" type="TextureButton" parent="."]
-margin_left = 671.0
-margin_top = 144.781
-margin_right = 771.0
-margin_bottom = 244.781
+margin_left = 518.0
+margin_top = 142.784
+margin_right = 618.0
+margin_bottom = 242.784
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 12 )
 expand = true
