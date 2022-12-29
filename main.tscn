@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://.tres" type="TileSet" id=2]
@@ -15,40 +15,10 @@
 [ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=13]
 [ext_resource path="res://sprite/LittleBack.png" type="Texture" id=14]
 [ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=15]
-[ext_resource path="res://Camera2D2.gd" type="Script" id=16]
 [ext_resource path="res://halfp.tscn" type="PackedScene" id=17]
 [ext_resource path="res://hp+.tscn" type="PackedScene" id=18]
 [ext_resource path="res://ttt.tres" type="TileSet" id=19]
-
-[sub_resource type="Animation" id=1]
-resource_name = "defolt"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 27.5, -20 ), Vector2( 27.5, -20 ) ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "gg"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 27.5, -20 ), Vector2( 17.5, -53.75 ), Vector2( 21.25, -17.5 ) ]
-}
+[ext_resource path="res://VIKA_player.tscn" type="PackedScene" id=20]
 
 [node name="level 1" type="Node2D"]
 z_as_relative = false
@@ -134,25 +104,6 @@ motion_mirroring = Vector2( 805, 0 )
 position = Vector2( 458, 434 )
 scale = Vector2( 0.132558, 0.153163 )
 texture = ExtResource( 9 )
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 439, 216 )
-
-[node name="Camera2D2" type="Camera2D" parent="Player"]
-position = Vector2( 20, -21.25 )
-rotating = true
-current = true
-process_mode = 0
-limit_left = 336
-limit_top = -100000
-limit_right = 6584
-limit_bottom = 570
-editor_draw_limits = true
-script = ExtResource( 16 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Camera2D2"]
-anims/defolt = SubResource( 1 )
-anims/gg = SubResource( 2 )
 
 [node name="CONTROL" type="CanvasLayer" parent="."]
 
@@ -282,6 +233,23 @@ position = Vector2( 5752, 155 )
 
 [node name="Node2D13" parent="." instance=ExtResource( 4 )]
 position = Vector2( 5337, -83 )
+
+[node name="VIKA_player" parent="." instance=ExtResource( 20 )]
+position = Vector2( 212, 44 )
+collision/safe_margin = 0.8
+
+[node name="Camera2D" type="Camera2D" parent="VIKA_player"]
+visible = false
+position = Vector2( 351.429, 227.143 )
+rotating = true
+current = true
+limit_left = 336
+limit_right = 6584
+limit_bottom = 570
+editor_draw_limits = true
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 469, 233 )
 
 [connection signal="pressed" from="CONTROL/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="CONTROL/Exit" to="." method="_on_Exit_pressed"]

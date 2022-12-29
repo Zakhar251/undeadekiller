@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=2]
@@ -20,6 +20,10 @@
 [ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=18]
 [ext_resource path="res://sprite/MonedaD.png" type="Texture" id=19]
 [ext_resource path="res://sprite/MonedaD — копия-export.png" type="Texture" id=20]
+[ext_resource path="res://ШРИФТ/new_dynamicfont.tres" type="DynamicFont" id=21]
+[ext_resource path="res://sprite/VМонеты/красные_монеты.png" type="Texture" id=22]
+[ext_resource path="res://sprite/VМонеты/синие_монеты.png" type="Texture" id=23]
+[ext_resource path="res://sprite/VМонеты/гемы.png" type="Texture" id=24]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -102,10 +106,14 @@ __meta__ = {
 }
 
 [node name="NewGame" type="TextureButton" parent="."]
-margin_left = 330.0
-margin_top = 113.0
-margin_right = 465.0
-margin_bottom = 250.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -67.5
+margin_top = -68.5
+margin_right = 67.5
+margin_bottom = 68.5
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 13 )
 expand = true
@@ -120,10 +128,10 @@ texture_pressed = ExtResource( 14 )
 expand = true
 
 [node name="Characters" type="TextureButton" parent="."]
-margin_left = 176.0
-margin_top = 124.812
-margin_right = 276.0
-margin_bottom = 224.812
+margin_left = 217.0
+margin_top = 145.78
+margin_right = 317.0
+margin_bottom = 245.78
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 15 )
 expand = true
@@ -138,10 +146,10 @@ texture_pressed = ExtResource( 16 )
 expand = true
 
 [node name="Shop" type="TextureButton" parent="."]
-margin_left = 518.0
-margin_top = 142.784
-margin_right = 618.0
-margin_bottom = 242.784
+margin_left = 493.0
+margin_top = 148.775
+margin_right = 593.0
+margin_bottom = 248.775
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 12 )
 expand = true
@@ -153,18 +161,57 @@ __meta__ = {
 }
 
 [node name="Control" parent="." instance=ExtResource( 11 )]
-margin_left = 277.0
-margin_top = -25.0
-margin_right = 277.0
-margin_bottom = -328.0
+margin_left = 11.0
+margin_top = -26.9593
+margin_right = 11.0
+margin_bottom = -329.959
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 425, 41.9367 )
+position = Vector2( 187, 40.9382 )
 scale = Vector2( 0.240744, 0.240744 )
 texture = ExtResource( 20 )
 normal_map = ExtResource( 19 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 167.297, 157.771 )
+
+[node name="КрасныеМонеты" type="Sprite" parent="."]
+position = Vector2( 319, 40.9382 )
+scale = Vector2( 0.241, 0.241 )
+texture = ExtResource( 22 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 499.0
+margin_top = 16.9744
+margin_right = 539.0
+margin_bottom = 58.9744
+custom_fonts/font = ExtResource( 21 )
+text = "0"
+
+[node name="СиниеМонеты" type="Sprite" parent="."]
+position = Vector2( 466, 40.9382 )
+scale = Vector2( 0.241, 0.241 )
+texture = ExtResource( 23 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 358.0
+margin_top = 17.9729
+margin_right = 398.0
+margin_bottom = 59.9729
+custom_fonts/font = ExtResource( 21 )
+text = "0"
+
+[node name="Гемы" type="Sprite" parent="."]
+position = Vector2( 604, 40.9382 )
+scale = Vector2( 0.241, 0.241 )
+texture = ExtResource( 24 )
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 639.0
+margin_top = 18.9714
+margin_right = 679.0
+margin_bottom = 60.9714
+custom_fonts/font = ExtResource( 21 )
+text = "0"
 
 [connection signal="pressed" from="NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]

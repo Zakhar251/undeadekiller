@@ -6,7 +6,10 @@ var time_delay
 
 
 func _process(delta):
+	$Label2.text = str(Global.red_mony)
 	$Control/Label.text = str(Global.kybki)
+	$Label3.text = str(Global.gems)
+	$Label.text = str(Global.blu_mony)
 
 func _on_NewGame_pressed():
 	$BUTTON.play()
@@ -34,21 +37,5 @@ func _on_Exit_pressed():
 	
 
 
-
-
-func get_save_stats():
-	return{
-		'filename':get_filename(),
-		'parent': get_parent().get_path(),
-		'stats':{
-			'pers' : Global.pers,
-			'kybki' : Global.kybki,
-			'freecoin' : Global.freecoin
-			
-			
-		}
-		
-	}
-	
 
 

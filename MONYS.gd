@@ -11,6 +11,6 @@ func _ANIM():
 
 func _on_MONYS_body_entered(body):
 	
-	if "Player" in body.name:
+	if "Player" in body.name or body.name == 'VIKA_player':
 		body.add_coin()
 		queue_free()
