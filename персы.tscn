@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=1]
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=2]
@@ -6,10 +6,9 @@
 [ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=4]
 [ext_resource path="res://sprite/Бойцы.png" type="Texture" id=5]
 [ext_resource path="res://персы.gd" type="Script" id=6]
-[ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=7]
+[ext_resource path="res://sprite/новый интерфейс/Back.png" type="Texture" id=7]
 [ext_resource path="res://ШРИФТ/new_dynamicfont.tres" type="DynamicFont" id=8]
 [ext_resource path="res://sprite/иконки персанажей/Вика.png" type="Texture" id=9]
-[ext_resource path="res://sprite/LittleBack.png" type="Texture" id=10]
 [ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=11]
 [ext_resource path="res://sprite/иконки персанажей/Вика_заблок.png" type="Texture" id=12]
 [ext_resource path="res://sprite/иконки персанажей/MAKL0 — копия-export.png" type="Texture" id=13]
@@ -27,17 +26,17 @@ scale = Vector2( 0.125948, 0.137855 )
 texture = ExtResource( 2 )
 
 [node name="Mountain2-export" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 400, 265 )
+position = Vector2( 400, 224 )
 scale = Vector2( 0.12064, 0.156496 )
 texture = ExtResource( 3 )
 
 [node name="Pine1-export" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 417, 360 )
+position = Vector2( 416, 304 )
 scale = Vector2( 0.119767, 0.0976353 )
 texture = ExtResource( 4 )
 
 [node name="Pine2-export" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 408, 394 )
+position = Vector2( 416, 344 )
 scale = Vector2( 0.121512, 0.0562814 )
 texture = ExtResource( 1 )
 
@@ -78,24 +77,32 @@ margin_right = 165.0
 margin_bottom = 122.0
 text = "Mike"
 
+[node name="Label4" type="Label" parent="."]
+margin_left = 208.0
+margin_top = 80.0
+margin_right = 293.0
+margin_bottom = 122.0
+text = "Vika"
+
 [node name="Sprite-0003" type="Sprite" parent="."]
 position = Vector2( 408, 16 )
 scale = Vector2( 0.133, 0.114588 )
 texture = ExtResource( 5 )
 
 [node name="НАЗАД" type="TextureButton" parent="."]
-margin_left = 10.0
-margin_top = 317.0
-margin_right = 83.0
-margin_bottom = 390.0
+margin_left = 18.0
+margin_top = 285.0
+margin_right = 91.0
+margin_bottom = 358.0
+rect_scale = Vector2( 1.4, 1.4 )
 texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 10 )
+texture_pressed = ExtResource( 7 )
 expand = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = 344.0
+margin_left = 360.0
 margin_top = 32.0
-margin_right = 368.0
+margin_right = 384.0
 margin_bottom = 74.0
 custom_fonts/font = ExtResource( 8 )
 text = "1"
@@ -109,4 +116,6 @@ custom_fonts/font = ExtResource( 8 )
 text = "/ 2"
 
 [connection signal="pressed" from="Maйкл" to="." method="_on_Ma_pressed"]
+[connection signal="pressed" from="VIKA_zabl" to="." method="_on_VIKA_zabl_pressed"]
+[connection signal="pressed" from="VIKA" to="." method="_on_VIKA_pressed"]
 [connection signal="pressed" from="НАЗАД" to="." method="_on__pressed"]

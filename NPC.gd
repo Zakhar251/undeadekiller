@@ -11,6 +11,7 @@ var damage = 1
 var is_alive = true
 var is_attac = false
 var is_dam = false
+var damage_VIKA = 2
 
 
 
@@ -45,8 +46,16 @@ func _on_Goblin_animation_finished():
 		vel.x = SPEED * der
 
 func _on_attace_body_entered(body):
-	if body.name == "Player":
+	if body.name == "Player" or body.name == "VIKA_player":
 		is_attac = true
 		vel.x = 0
 		$Goblin.play("attac")
 		body.kill()
+
+func handle_hit_VIKA(damage_VIKA: int):
+	hp-=damage_VIKA
+	print("enemy was hit! current health:" + str(hp))
+	if hp <1:
+		is_alive = false
+		vel.x = 0
+		$Goblin.play("death")

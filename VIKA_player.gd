@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
 
-var speed = 140
-onready var hp = 99
+var speed = 135
+onready var hp = 5
 export var max_hp = 5
 var jumpForce = 270
 var gravity = 500
-onready var weapon = $Weapon
+onready var weapon = $AnimatedSprite
 var mony_player = 0
 var mony = 1
 var der = 1
@@ -26,18 +26,24 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("attac"):
 		$AnimationPlayer.play("attac")
+		
 	
 		
 	if Input.is_action_pressed("left"):		
 		vel.x = -speed
-		$AnimatedSprite.flip_h = true and ($AnimatedSprite.position.x) +16
+		$AnimatedSprite.flip_h = true 
+		$CollisionShape2D.disabled = true
+		$CollisionShape2D2.disabled = false
 		$Area2D.position.x = abs($Area2D.position.x) * -1
 		$AnimatedSprite.play("run") and is_on_floor()
 	
 	elif Input.is_action_pressed("rigth"):
 		vel.x = +speed
 		$AnimatedSprite.flip_h = false
-		$Area2D.position.x = abs($AnimatedSprite.position.x) * 1
+		$Area2D.position.x = abs($AnimatedSprite.position.x) * 0.1
+		$CollisionShape2D.disabled = false
+		$CollisionShape2D2.disabled = true
+		
 		$AnimatedSprite.play("run") and is_on_floor()
 		
 	else:

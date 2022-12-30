@@ -10,9 +10,12 @@ var red_mony = 0
 var blu_mony = 0
 var gems = 0
 var vika = false
+var porrtal = false
 var free_vika = 1
 
-
+func portal():
+	porrtal = true
+	
 func kybk():
 	kybki = kybki + 1
 	print("монетки",kybki)
