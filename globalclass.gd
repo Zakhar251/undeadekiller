@@ -12,9 +12,13 @@ var gems = 0
 var vika = false
 var porrtal = false
 var free_vika = 1
+var kybok = 0
+var promocod = 1
+
 
 func portal():
 	porrtal = true
+	
 	
 func kybk():
 	kybki = kybki + 1

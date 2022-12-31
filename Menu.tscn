@@ -224,9 +224,9 @@ custom_fonts/font = ExtResource( 21 )
 text = "0"
 
 [node name="Label5" type="Label" parent="."]
-margin_left = 124.0
+margin_left = 120.0
 margin_top = 18.9714
-margin_right = 164.0
+margin_right = 160.0
 margin_bottom = 60.9714
 custom_fonts/font = ExtResource( 21 )
 text = "0"

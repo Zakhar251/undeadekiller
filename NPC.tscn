@@ -193,7 +193,7 @@ animations = [ {
 "frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
 "loop": false,
 "name": "take hit",
-"speed": 4.0
+"speed": 8.0
 } ]
 
 [sub_resource type="Animation" id=26]
@@ -292,7 +292,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 118, 37.5 )
+extents = Vector2( 67.25, 20.5 )
 
 [node name="NPC" type="KinematicBody2D"]
 position = Vector2( -264, -120 )
@@ -305,6 +305,7 @@ position = Vector2( 265, 125 )
 shape = SubResource( 1 )
 
 [node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2( 265.5, 125 )
@@ -316,9 +317,12 @@ shape = SubResource( 2 )
 position = Vector2( 268, 103 )
 scale = Vector2( 0.229917, 0.229917 )
 frames = SubResource( 23 )
-animation = "attac"
+animation = "take hit"
+frame = 3
+playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
 root_node = NodePath("../..")
@@ -337,7 +341,14 @@ anims/attac = SubResource( 36 )
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attace"]
-position = Vector2( 269, 124.5 )
+position = Vector2( 263, 121 )
+shape = SubResource( 27 )
+
+[node name="attace2" type="Area2D" parent="."]
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attace2"]
+position = Vector2( 264, 122 )
 shape = SubResource( 27 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -351,4 +362,5 @@ one_shot = true
 [connection signal="animation_finished" from="Goblin" to="." method="_on_Goblin_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="attace" to="." method="_on_attace_body_entered"]
+[connection signal="body_entered" from="attace2" to="." method="_on_attace2_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

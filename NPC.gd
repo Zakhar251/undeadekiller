@@ -3,8 +3,8 @@ extends KinematicBody2D
 const SPEED =70
 const GRAVITY = 100
 const FLOOR = Vector2(0 , -1)
-onready var hp = 30
-onready var max_hp = 30
+var hp = 3
+var max_hp = 3
 var vel = Vector2()
 var der = 1
 var damage = 1
@@ -17,9 +17,10 @@ var damage_VIKA = 2
 
 
 	
-func handle_hit(damage: int):
+func handle_hit():
 	hp-=damage
-	print("enemy was hit! current health:" + str(hp))
+	$Goblin.play("take hit")
+	print("hpNPC" + str(hp))
 	if hp <1:
 		is_alive = false
 		vel.x = 0
@@ -41,21 +42,35 @@ func _physics_process(delta):
 func _on_Goblin_animation_finished():
 	if $Goblin.animation == "death":
 		queue_free() 
-	if $Goblin.animation == "attac":
+	
+	elif $Goblin.animation == 'take hit':
+		$Goblin.play("idle")
+
+
+	elif $Goblin.animation == "attac":
 		is_attac = false
-		vel.x = SPEED * der
+		
 
 func _on_attace_body_entered(body):
-	if body.name == "Player" or body.name == "VIKA_player":
+	if body.name == "Player":
 		is_attac = true
 		vel.x = 0
 		$Goblin.play("attac")
 		body.kill()
 
-func handle_hit_VIKA(damage_VIKA: int):
+func handle_hit_VIKA():
 	hp-=damage_VIKA
+	$Goblin.play("take hit")
 	print("enemy was hit! current health:" + str(hp))
 	if hp <1:
 		is_alive = false
 		vel.x = 0
 		$Goblin.play("death")
+
+
+func _on_attace2_body_entered(body):
+	if body.name == "VIKA_player":
+		is_attac = true
+		vel.x = 0
+		$Goblin.play("attac")
+		body.kill_VIKa()

@@ -32,17 +32,15 @@ func _physics_process(delta):
 	if Input.is_action_pressed("left"):		
 		vel.x = -speed
 		$AnimatedSprite.flip_h = true 
-		$CollisionShape2D.disabled = true
-		$CollisionShape2D2.disabled = false
-		$Area2D.position.x = abs($Area2D.position.x) * -1
+		
+		$zdfbsebsb.position.x = abs($zdfbsebsb.position.x) * -1
 		$AnimatedSprite.play("run") and is_on_floor()
 	
 	elif Input.is_action_pressed("rigth"):
 		vel.x = +speed
 		$AnimatedSprite.flip_h = false
-		$Area2D.position.x = abs($AnimatedSprite.position.x) * 0.1
-		$CollisionShape2D.disabled = false
-		$CollisionShape2D2.disabled = true
+		$zdfbsebsb.position.x = abs($zdfbsebsb.position.x) * 1
+		
 		
 		$AnimatedSprite.play("run") and is_on_floor()
 		
@@ -73,7 +71,7 @@ func add_coin():
 	coins += 1 
 	print(coins)
 
-func kill():
+func kill_VIKa():
 	hp -= damage
 	print("hp:",hp)
 	if hp < 1:
@@ -85,3 +83,6 @@ func add_hp():
 		hp += 0
 	else:
 		hp += 1
+
+
+	

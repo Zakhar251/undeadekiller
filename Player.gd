@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var speed = 120
 onready var hp = 7
-export var max_hp = 5
+export var max_hp = 7
 var jumpForce = 270
 var gravity = 500
 onready var weapon = $Weapon

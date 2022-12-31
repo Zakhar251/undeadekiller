@@ -1,8 +1,5 @@
 extends Control
 
-var pers = Global.pers
-
-
 
 func _process(delta):
 	if Global.vika == true:

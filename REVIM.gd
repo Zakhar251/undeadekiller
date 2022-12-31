@@ -4,7 +4,7 @@ extends Control
 	
 func _on_StoryGame_pressed():
 	$BUTTON.play()
-	get_tree().change_scene("res://main.tscn")
+	get_tree().change_scene("res://level.tscn")
 
 
 func _on_Arcade_pressed():

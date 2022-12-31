@@ -10,6 +10,7 @@ func _process(delta):
 	$Control/Label.text = str(Global.kybki)
 	$Label3.text = str(Global.gems)
 	$Label.text = str(Global.blu_mony)
+	$Label5.text = str(Global.kybok)
 
 func _on_NewGame_pressed():
 	$BUTTON.play()
@@ -29,7 +30,7 @@ func _on_Shop_pressed():
 
 func _on_Settings_pressed():
 	$BUTTON.play()
-	get_tree().change_scene("res://СКОРО.tscn")
+	get_tree().change_scene("res://NASTROIKI.tscn")
 
 
 func _on_Exit_pressed():
