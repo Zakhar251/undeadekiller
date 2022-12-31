@@ -7,7 +7,7 @@
 [ext_resource path="res://REVIM.gd" type="Script" id=5]
 [ext_resource path="res://sprite/новый интерфейс/Back.png" type="Texture" id=6]
 [ext_resource path="res://sprite/Arcade.png" type="Texture" id=7]
-[ext_resource path="res://sprite/Heart SM.png" type="Texture" id=8]
+[ext_resource path="res://sprite/SM.png" type="Texture" id=8]
 [ext_resource path="res://sprite/LittleArcade.png" type="Texture" id=10]
 [ext_resource path="res://ШРИФТ/new_dynamicfont.tres" type="DynamicFont" id=11]
 [ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=12]
@@ -93,10 +93,10 @@ scale = Vector2( 0.120702, 0.120702 )
 texture = ExtResource( 13 )
 
 [node name="StoryGame" type="TextureButton" parent="."]
-margin_left = 202.0
-margin_top = 89.0
-margin_right = 433.0
-margin_bottom = 320.0
+margin_left = 96.0
+margin_top = -15.0
+margin_right = 539.0
+margin_bottom = 428.0
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 8 )
 expand = true

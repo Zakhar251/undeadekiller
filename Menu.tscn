@@ -232,7 +232,6 @@ margin_right = 97.0
 margin_bottom = 104.905
 custom_fonts/font = ExtResource( 21 )
 text = "0"
-percent_visible = -1.0
 
 [node name="Label4" type="Label" parent="."]
 anchor_left = 0.5
