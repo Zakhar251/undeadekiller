@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=1]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=2]
@@ -7,8 +7,7 @@
 [ext_resource path="res://REVIM.gd" type="Script" id=5]
 [ext_resource path="res://sprite/новый интерфейс/Back.png" type="Texture" id=6]
 [ext_resource path="res://sprite/Arcade.png" type="Texture" id=7]
-[ext_resource path="res://sprite/StoryMode.png" type="Texture" id=8]
-[ext_resource path="res://sprite/LittleStoryMode.png" type="Texture" id=9]
+[ext_resource path="res://sprite/Heart SM.png" type="Texture" id=8]
 [ext_resource path="res://sprite/LittleArcade.png" type="Texture" id=10]
 [ext_resource path="res://ШРИФТ/new_dynamicfont.tres" type="DynamicFont" id=11]
 [ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=12]
@@ -94,19 +93,19 @@ scale = Vector2( 0.120702, 0.120702 )
 texture = ExtResource( 13 )
 
 [node name="StoryGame" type="TextureButton" parent="."]
-margin_left = 224.0
-margin_top = 137.0
-margin_right = 396.0
-margin_bottom = 309.0
+margin_left = 202.0
+margin_top = 89.0
+margin_right = 433.0
+margin_bottom = 320.0
 texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 9 )
+texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="Arcade" type="TextureButton" parent="."]
 margin_left = 474.0
-margin_top = 119.0
+margin_top = 104.0
 margin_right = 667.0
-margin_bottom = 312.0
+margin_bottom = 297.0
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 10 )
 expand = true
@@ -128,18 +127,18 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 262.0
-margin_top = 277.0
-margin_right = 381.0
-margin_bottom = 319.0
+margin_left = 263.0
+margin_top = 270.0
+margin_right = 382.0
+margin_bottom = 312.0
 custom_fonts/font = ExtResource( 11 )
 text = "Story "
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 500.0
-margin_top = 277.0
-margin_right = 619.0
-margin_bottom = 319.0
+margin_top = 270.0
+margin_right = 640.0
+margin_bottom = 312.0
 custom_fonts/font = ExtResource( 11 )
 text = "Arcade"
 

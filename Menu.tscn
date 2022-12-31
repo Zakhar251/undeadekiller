@@ -173,13 +173,13 @@ __meta__ = {
 }
 
 [node name="Control" parent="." instance=ExtResource( 11 )]
-margin_left = -128.0
-margin_top = 20.9683
-margin_right = -128.0
-margin_bottom = -282.031
+margin_left = -35.0
+margin_top = -51.9216
+margin_right = -35.0
+margin_bottom = -354.921
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 38, 88.8658 )
+position = Vector2( 143, 19.9698 )
 scale = Vector2( 0.240744, 0.240744 )
 texture = ExtResource( 20 )
 normal_map = ExtResource( 19 )
@@ -187,51 +187,52 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 167.297, 157.771 )
 
 [node name="КрасныеМонеты" type="Sprite" parent="."]
-position = Vector2( 774, 122.815 )
+position = Vector2( 324, 19.9698 )
 scale = Vector2( 0.241, 0.241 )
 texture = ExtResource( 22 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 716.0
-margin_top = 5.99095
-margin_right = 756.0
-margin_bottom = 47.991
+margin_left = 696.0
+margin_top = -3.99397
+margin_right = 736.0
+margin_bottom = 38.0061
 custom_fonts/font = ExtResource( 21 )
 text = "0"
 
 [node name="СиниеМонеты" type="Sprite" parent="."]
-position = Vector2( 775.87, 30.2634 )
+position = Vector2( 670, 19.9698 )
 scale = Vector2( 0.241, 0.241 )
 texture = ExtResource( 23 )
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 718.0
-margin_top = 99.8492
-margin_right = 758.0
-margin_bottom = 141.849
+margin_left = 349.0
+margin_top = -2.99548
+margin_right = 389.0
+margin_bottom = 39.0045
 custom_fonts/font = ExtResource( 21 )
 text = "0"
 
 [node name="Гемы" type="Sprite" parent="."]
-position = Vector2( 775.87, 76.1941 )
+position = Vector2( 501, 18.9714 )
 scale = Vector2( 0.241, 0.241 )
 texture = ExtResource( 24 )
 
 [node name="Label3" type="Label" parent="."]
-margin_left = 717.0
-margin_top = 53.9186
-margin_right = 757.0
-margin_bottom = 95.9186
+margin_left = 525.0
+margin_top = -2.99548
+margin_right = 565.0
+margin_bottom = 39.0045
 custom_fonts/font = ExtResource( 21 )
 text = "0"
 
 [node name="Label5" type="Label" parent="."]
-margin_left = 75.0
-margin_top = 13.0287
-margin_right = 115.0
-margin_bottom = 55.0287
+margin_left = 57.0
+margin_top = 62.905
+margin_right = 97.0
+margin_bottom = 104.905
 custom_fonts/font = ExtResource( 21 )
 text = "0"
+percent_visible = -1.0
 
 [node name="Label4" type="Label" parent="."]
 anchor_left = 0.5
@@ -246,17 +247,17 @@ custom_fonts/font = ExtResource( 21 )
 text = "BETA 1.2"
 
 [node name="Кубок" type="Sprite" parent="."]
-position = Vector2( 36, 31.0015 )
+position = Vector2( 28, 75.8854 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 12 )
 
 [node name="Undead1" type="Sprite" parent="."]
-position = Vector2( 306, 73.8884 )
+position = Vector2( 324, 93.8583 )
 scale = Vector2( 0.202344, 0.211162 )
 texture = ExtResource( 13 )
 
 [node name="Killer" type="Sprite" parent="."]
-position = Vector2( 537, 72.0175 )
+position = Vector2( 547, 92.8598 )
 scale = Vector2( 0.226074, 0.146851 )
 texture = ExtResource( 14 )
 
