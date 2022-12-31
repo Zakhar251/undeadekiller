@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://sprite/новый интерфейс/Sprite-0001.png" type="Texture" id=10]
 [ext_resource path="res://kybki.tscn" type="PackedScene" id=11]
 [ext_resource path="res://sprite/новый интерфейс/Кубок.png" type="Texture" id=12]
+[ext_resource path="res://sprite/Undead1.png" type="Texture" id=13]
+[ext_resource path="res://sprite/Killer.png" type="Texture" id=14]
 [ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=17]
 [ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=18]
 [ext_resource path="res://sprite/MonedaD.png" type="Texture" id=19]
@@ -247,6 +249,16 @@ text = "BETA 1.2"
 position = Vector2( 36, 31.0015 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 12 )
+
+[node name="Undead1" type="Sprite" parent="."]
+position = Vector2( 306, 73.8884 )
+scale = Vector2( 0.202344, 0.211162 )
+texture = ExtResource( 13 )
+
+[node name="Killer" type="Sprite" parent="."]
+position = Vector2( 537, 72.0175 )
+scale = Vector2( 0.226074, 0.146851 )
+texture = ExtResource( 14 )
 
 [connection signal="pressed" from="NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]
