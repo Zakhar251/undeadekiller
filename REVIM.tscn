@@ -94,19 +94,19 @@ scale = Vector2( 0.120702, 0.120702 )
 texture = ExtResource( 13 )
 
 [node name="StoryGame" type="TextureButton" parent="."]
-margin_left = 201.0
-margin_top = 104.0
-margin_right = 418.0
-margin_bottom = 321.0
+margin_left = 224.0
+margin_top = 137.0
+margin_right = 396.0
+margin_bottom = 309.0
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 expand = true
 
 [node name="Arcade" type="TextureButton" parent="."]
-margin_left = 466.0
-margin_top = 109.0
-margin_right = 659.0
-margin_bottom = 302.0
+margin_left = 474.0
+margin_top = 119.0
+margin_right = 667.0
+margin_bottom = 312.0
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 10 )
 expand = true
