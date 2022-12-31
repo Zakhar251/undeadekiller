@@ -149,22 +149,21 @@ margin_top = 8.0
 margin_right = 447.0
 margin_bottom = 50.0
 custom_fonts/font = ExtResource( 23 )
-text = "Vika, a rare fighter"
+text = "Vika, the rare fighter"
 
 [node name="Label3" type="Label" parent="."]
-margin_left = 616.0
+margin_left = 600.0
 margin_top = 288.0
-margin_right = 705.0
+margin_right = 739.0
 margin_bottom = 330.0
 custom_fonts/font = ExtResource( 23 )
-text = "PICK"
+text = "Select"
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 245, 178 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
