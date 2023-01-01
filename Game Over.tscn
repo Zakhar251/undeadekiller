@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://ШРИФТ/new_dynamicfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://sprite/новый интерфейс/Sprite-0001.png" type="Texture" id=2]
 [ext_resource path="res://sprite/новый интерфейс/Back.png" type="Texture" id=3]
 [ext_resource path="res://sprite/Замок/Sprite-0011.png" type="Texture" id=4]
+[ext_resource path="res://sprite/новый интерфейс/ГЕМ.png" type="Texture" id=5]
 
 [node name="Game Over" type="CanvasLayer"]
 
@@ -35,7 +36,7 @@ margin_right = 631.0
 margin_bottom = 640.0
 rect_scale = Vector2( 0.2, 0.2 )
 texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 2 )
+texture_pressed = ExtResource( 5 )
 
 [node name="TextureButton2" type="TextureButton" parent="."]
 anchor_left = 0.5
@@ -48,4 +49,4 @@ margin_right = 517.0
 margin_bottom = 640.0
 rect_scale = Vector2( 0.2, 0.2 )
 texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )

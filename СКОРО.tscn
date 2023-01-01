@@ -4,9 +4,9 @@
 [ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=2]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=3]
 [ext_resource path="res://sprite/СКОРО.png" type="Texture" id=4]
-[ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=5]
+[ext_resource path="res://sprite/новый интерфейс/Back.png" type="Texture" id=5]
 [ext_resource path="res://СКОРО.gd" type="Script" id=6]
-[ext_resource path="res://sprite/LittleBack.png" type="Texture" id=7]
+[ext_resource path="res://sprite/новый интерфейс/ГЕМ.png" type="Texture" id=7]
 [ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=8]
 [ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=9]
 [ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=10]
@@ -129,10 +129,10 @@ scale = Vector2( 0.545, 0.545 )
 texture = ExtResource( 4 )
 
 [node name="НАЗАД" type="TextureButton" parent="."]
-margin_left = 10.0
-margin_top = 305.0
-margin_right = 95.0
-margin_bottom = 390.0
+margin_left = -1.0
+margin_top = 272.0
+margin_right = 128.0
+margin_bottom = 401.0
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 7 )
 expand = true
