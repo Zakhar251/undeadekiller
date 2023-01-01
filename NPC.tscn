@@ -292,7 +292,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 67.25, 20.5 )
+extents = Vector2( 60.625, 20.5 )
 
 [node name="NPC" type="KinematicBody2D"]
 position = Vector2( -264, -120 )
@@ -317,9 +317,7 @@ shape = SubResource( 2 )
 position = Vector2( 268, 103 )
 scale = Vector2( 0.229917, 0.229917 )
 frames = SubResource( 23 )
-animation = "take hit"
-frame = 3
-playing = true
+animation = "attac"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
@@ -348,7 +346,7 @@ shape = SubResource( 27 )
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attace2"]
-position = Vector2( 264, 122 )
+position = Vector2( 270.625, 122 )
 shape = SubResource( 27 )
 
 [node name="Timer" type="Timer" parent="."]

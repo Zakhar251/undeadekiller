@@ -6,11 +6,9 @@ func _process(delta):
 		$portal_level2.visible = true
 		get_tree().paused = true
 		
-	
-	$CONTROL/STATS/Label.text = str($VIKA_player.coins)
-	$CONTROL/hp/Label.text = str($VIKA_player.hp)
+	$CONTROL/STATS/Label.text = str($Player.coins)
+	$CONTROL/hp/Label.text = str($Player.hp)
 
 
 func _on_Exit_pressed():
 	get_tree().change_scene("res://Menu.tscn")
-	

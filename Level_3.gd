@@ -1,13 +1,11 @@
 extends Node2D
 
-var save = false
-
 
 func _process(delta):
-	$CONTROL/STATS/Label.text = str($VIKA_player.coins)
-	$CONTROL/hp/Label.text = str($VIKA_player.hp)
+	$CONTROL/STATS/Label.text = str($Player.coins)
+	$CONTROL/hp/Label.text = str($Player.hp)
 	if Global.porrtal == true:
-		$portal_console.visible = true
+		$portal_console_level3.visible = true
 		get_tree().paused = true
 
 	
@@ -19,7 +17,4 @@ func _on_TextureButton_pressed():
 	get_tree().change_scene("res://Pause.tscn")
 
 func _on_Exit_pressed():
-	$BUTTON.play()
 	get_tree().change_scene("res://Menu.tscn")
-	
-

@@ -10,7 +10,7 @@ func _process(delta):
 
 
 func _on_VIKA_pressed():
-	get_tree().change_scene("res://main_mike.tscn")
+	get_tree().change_scene("res://level3_Vika.tscn")
 
 
 func _on__pressed():
@@ -18,4 +18,4 @@ func _on__pressed():
 
 
 func _on_Ma_pressed():
-	get_tree().change_scene("res://main.tscn")
+	get_tree().change_scene("res://Level3_maik.tscn")

@@ -171,9 +171,9 @@ __meta__ = {
 }
 
 [node name="Control" parent="." instance=ExtResource( 11 )]
-margin_left = 51.0
+margin_left = 45.0
 margin_top = -26.9593
-margin_right = 51.0
+margin_right = 45.0
 margin_bottom = -329.959
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -185,7 +185,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 167.297, 157.771 )
 
 [node name="КрасныеМонеты" type="Sprite" parent="."]
-position = Vector2( 365, 40.9382 )
+position = Vector2( 357, 40.9382 )
 scale = Vector2( 0.241, 0.241 )
 texture = ExtResource( 22 )
 
@@ -203,22 +203,22 @@ scale = Vector2( 0.241, 0.241 )
 texture = ExtResource( 23 )
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 406.0
+margin_left = 397.0
 margin_top = 17.9729
-margin_right = 446.0
+margin_right = 437.0
 margin_bottom = 59.9729
 custom_fonts/font = ExtResource( 21 )
 text = "0"
 
 [node name="Гемы" type="Sprite" parent="."]
-position = Vector2( 623, 40.9382 )
+position = Vector2( 637, 40.9382 )
 scale = Vector2( 0.241, 0.241 )
 texture = ExtResource( 24 )
 
 [node name="Label3" type="Label" parent="."]
-margin_left = 653.0
+margin_left = 677.0
 margin_top = 18.9714
-margin_right = 693.0
+margin_right = 717.0
 margin_bottom = 60.9714
 custom_fonts/font = ExtResource( 21 )
 text = "0"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=1]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=2]
@@ -6,10 +6,8 @@
 [ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=4]
 [ext_resource path="res://REVIM.gd" type="Script" id=5]
 [ext_resource path="res://sprite/новый интерфейс/Back.png" type="Texture" id=6]
-[ext_resource path="res://sprite/Arcade.png" type="Texture" id=7]
-[ext_resource path="res://sprite/StoryMode.png" type="Texture" id=8]
-[ext_resource path="res://sprite/LittleStoryMode.png" type="Texture" id=9]
-[ext_resource path="res://sprite/LittleArcade.png" type="Texture" id=10]
+[ext_resource path="res://sprite/новый интерфейс/SM.png" type="Texture" id=7]
+[ext_resource path="res://sprite/новый интерфейс/Arcade.png" type="Texture" id=8]
 [ext_resource path="res://ШРИФТ/new_dynamicfont.tres" type="DynamicFont" id=11]
 [ext_resource path="res://muz/mechanic-button-pressing_fj_hbhno.mp3" type="AudioStream" id=12]
 [ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=13]
@@ -94,12 +92,13 @@ scale = Vector2( 0.120702, 0.120702 )
 texture = ExtResource( 13 )
 
 [node name="StoryGame" type="TextureButton" parent="."]
-margin_left = 201.0
-margin_top = 104.0
-margin_right = 418.0
-margin_bottom = 321.0
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 9 )
+margin_left = 139.0
+margin_top = 51.0
+margin_right = 356.0
+margin_bottom = 268.0
+rect_scale = Vector2( 1.5, 1.5 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
 expand = true
 
 [node name="Arcade" type="TextureButton" parent="."]
@@ -107,8 +106,8 @@ margin_left = 466.0
 margin_top = 109.0
 margin_right = 659.0
 margin_bottom = 302.0
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 10 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="НАЗАД" type="TextureButton" parent="."]
@@ -128,17 +127,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 262.0
-margin_top = 277.0
-margin_right = 381.0
-margin_bottom = 319.0
+margin_left = 249.0
+margin_top = 276.0
+margin_right = 368.0
+margin_bottom = 318.0
 custom_fonts/font = ExtResource( 11 )
 text = "Story "
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 500.0
+margin_left = 491.0
 margin_top = 277.0
-margin_right = 619.0
+margin_right = 631.0
 margin_bottom = 319.0
 custom_fonts/font = ExtResource( 11 )
 text = "Arcade"

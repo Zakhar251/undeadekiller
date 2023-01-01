@@ -14,7 +14,10 @@ var porrtal = false
 var free_vika = 1
 var kybok = 0
 var promocod = 1
-
+var level2 = false
+var level3 = false
+var level4 = false
+var level5 = false
 
 func portal():
 	porrtal = true
