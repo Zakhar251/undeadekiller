@@ -17,6 +17,7 @@ func _process(delta):
 
 
 func _on_TextureButton_pressed():
+	Global.level_vabor = 1
 	get_tree().change_scene("res://personaz_vabor.tscn")
 
 
@@ -25,8 +26,10 @@ func _on__pressed():
 
 
 func _on_TextureButton2_pressed():
-	get_tree().change_scene("res://personaz_vabor_level2.tscn")
+	Global.level_vabor = 2
+	get_tree().change_scene("res://personaz_vabor.tscn")
 
 
 func _on_TextureButton3_pressed():
-	get_tree().change_scene("res://personaz_vabor_level3.tscn")
+	Global.level_vabor = 3
+	get_tree().change_scene("res://personaz_vabor.tscn")

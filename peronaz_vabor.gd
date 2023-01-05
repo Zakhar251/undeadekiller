@@ -10,7 +10,14 @@ func _process(delta):
 
 
 func _on_VIKA_pressed():
-	get_tree().change_scene("res://main_mike.tscn")
+	if Global.level_vabor == 1:
+		get_tree().change_scene("res://main_mike.tscn")
+	elif Global.level_vabor == 2:
+		Global.player_level = 'Vika'
+		get_tree().change_scene("res://Level 2 comnata 1.tscn")
+	elif Global.level_vabor == 3:
+		get_tree().change_scene("res://level3_Vika.tscn")
+
 
 
 func _on__pressed():
@@ -18,4 +25,10 @@ func _on__pressed():
 
 
 func _on_Ma_pressed():
-	get_tree().change_scene("res://main.tscn")
+	if Global.level_vabor == 1:
+		get_tree().change_scene("res://main.tscn")
+	elif Global.level_vabor == 2:
+		Global.player_level = 'Maike'
+		get_tree().change_scene("res://Level 2 comnata 1.tscn")
+	elif Global.level_vabor == 3:
+		get_tree().change_scene("res://Level3_maik.tscn")

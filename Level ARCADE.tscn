@@ -1,73 +1,16 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://.tres" type="TileSet" id=1]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Y[ravle.tscn" type="PackedScene" id=3]
-[ext_resource path="res://halfp.tscn" type="PackedScene" id=4]
-[ext_resource path="res://STATS.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Camera2D2.gd" type="Script" id=6]
-[ext_resource path="res://sprite/back_arrow_14429.png" type="Texture" id=7]
-[ext_resource path="res://sprite/LittleBack.png" type="Texture" id=8]
+[ext_resource path="res://Mag_player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=9]
 [ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=10]
 [ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=11]
 [ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=12]
 [ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=13]
-[ext_resource path="res://NPC_ARCADE228.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Level ARCADE.gd" type="Script" id=15]
-
-[sub_resource type="Animation" id=1]
-resource_name = "defolt"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 27.5, -20 ), Vector2( 27.5, -20 ) ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "gg"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 27.5, -20 ), Vector2( 17.5, -53.75 ), Vector2( 21.25, -17.5 ) ]
-}
 
 [node name="Level ARCADE" type="Node2D"]
 script = ExtResource( 15 )
-
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 386, 249 )
-scale = Vector2( 1, 1 )
-
-[node name="Camera2D2" type="Camera2D" parent="Player"]
-position = Vector2( 20, -21.25 )
-rotating = true
-current = true
-process_mode = 0
-limit_left = 336
-limit_top = -100000
-limit_right = 6584
-limit_bottom = 570
-editor_draw_limits = true
-script = ExtResource( 6 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Camera2D2"]
-anims/defolt = SubResource( 1 )
-anims/gg = SubResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.25, 0.25 )
@@ -81,31 +24,6 @@ tile_data = PoolIntArray( -393196, 536870922, 0, -262124, 536870922, 0, -131052,
 tile_set = ExtResource( 1 )
 format = 1
 tile_data = PoolIntArray( 1245184, 4, 0, 1245186, 4, 0, 1245188, 4, 0, 1245190, 4, 0, 1245192, 4, 0, 1245194, 4, 0, 1245196, 4, 0, 1245198, 4, 0, 1245200, 4, 0, 1245202, 4, 0, 1245204, 4, 0, 1245206, 4, 0, 1245208, 4, 0, 1245210, 4, 0, 1245212, 4, 0, 1245214, 4, 0, 1245216, 4, 0, 1245218, 4, 0, 1245220, 4, 0, 1245222, 4, 0, 1245224, 4, 0, 1245226, 4, 0, 1245228, 4, 0, 1245230, 4, 0, 1245232, 4, 0, 1245234, 4, 0, 1245236, 4, 0, 1245238, 4, 0, 1245240, 4, 0, 1245242, 4, 0, 1245244, 4, 0, 1245246, 4, 0, 1245248, 4, 0, 1245250, 4, 0, 1245252, 4, 0, 1245254, 4, 0, 1245256, 4, 0, 1245258, 4, 0, 1245260, 4, 0, 1245262, 4, 0, 1245264, 4, 0, 1245266, 4, 0, 1245268, 4, 0, 1245270, 4, 0, 1245272, 4, 0, 1245274, 4, 0, 1245276, 4, 0, 1245278, 4, 0, 1245280, 4, 0, 1245282, 4, 0, 1245284, 4, 0, 1245286, 4, 0, 1245288, 4, 0, 1245290, 4, 0, 1245292, 4, 0, 1245294, 4, 0, 1245296, 4, 0, 1245298, 4, 0, 1245300, 4, 0, 1245302, 4, 0, 1245304, 4, 0, 1245306, 4, 0, 1245308, 4, 0, 1245310, 4, 0, 1245312, 4, 0, 1245314, 4, 0, 1245316, 4, 0, 1245318, 4, 0, 1245320, 4, 0, 1245322, 4, 0, 1245324, 4, 0, 1245326, 4, 0, 1245328, 4, 0, 1245330, 4, 0, 1245332, 4, 0 )
-
-[node name="CONTROL" type="CanvasLayer" parent="."]
-
-[node name="Node2D2" parent="CONTROL" instance=ExtResource( 3 )]
-visible = false
-position = Vector2( 18, 13 )
-
-[node name="hp" parent="CONTROL" instance=ExtResource( 4 )]
-margin_left = 19.0
-margin_top = 57.0
-margin_right = 19.0
-margin_bottom = 57.0
-rect_pivot_offset = Vector2( 45, 10 )
-
-[node name="STATS" parent="CONTROL" groups=["stass"] instance=ExtResource( 5 )]
-position = Vector2( -44, -6 )
-
-[node name="Exit" type="TextureButton" parent="CONTROL"]
-margin_left = 740.0
-margin_top = 6.0
-margin_right = 790.0
-margin_bottom = 56.0
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
-expand = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0, 0 )
@@ -167,5 +85,11 @@ position = Vector2( 473, 357 )
 scale = Vector2( 0.132558, 0.153163 )
 texture = ExtResource( 13 )
 
-[node name="NPC_ARCADE228" parent="." instance=ExtResource( 14 )]
-position = Vector2( 440, 103 )
+[node name="Mag_player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 524, 248 )
+scale = Vector2( 1.4, 1.4 )
+
+[node name="Camera2D" type="Camera2D" parent="Mag_player"]
+position = Vector2( -10, 9 )
+rotating = true
+current = true

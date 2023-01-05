@@ -2,7 +2,7 @@ extends Control
 
 
 func _process(delta):
-	if $LineEdit.text == "Za4aR!80509" and Global.promocod == 1:
+	if $LineEdit.text == "7B_govno" and Global.promocod == 1:
 		Global.promocod -= 1
 		Global.kybok += 999
 		Global.kybki += 999

@@ -12,6 +12,7 @@ var is_alive = true
 var is_attac = false
 var is_dam = false
 var damage_VIKA = 2
+var optimiz = true
 
 
 
@@ -31,6 +32,12 @@ func _der():
 		$Goblin.flip_h = !$Goblin.flip_h
 		
 func _physics_process(delta):
+	if optimiz == true:
+		$Goblin.visible = false
+		$frek.visible = true
+	else:
+		$Goblin.visible = true
+		$frek.visible = false
 	if is_alive == true and is_attac == false and is_dam == false:
 		vel.x = SPEED * der
 		$Goblin.play("run")
@@ -74,3 +81,11 @@ func _on_attace2_body_entered(body):
 		vel.x = 0
 		$Goblin.play("attac")
 		body.kill_VIKa()
+
+
+func optimizz():
+	optimiz = false
+	
+func optimiz_true():
+	optimiz = true
+	
