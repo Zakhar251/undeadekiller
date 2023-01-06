@@ -1,0 +1,219 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=1]
+[ext_resource path="res://Pytь k clave.gd" type="Script" id=2]
+[ext_resource path="res://sprite/путь к славе/Sprite-0002.png" type="Texture" id=3]
+[ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=4]
+[ext_resource path="res://sprite/новый интерфейс/ГЕМ.png" type="Texture" id=5]
+[ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=6]
+[ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=7]
+[ext_resource path="res://sprite/новый интерфейс/Back.png" type="Texture" id=8]
+[ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=9]
+
+[node name="Pytь k clave" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky-export" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 407, 142.438 )
+scale = Vector2( 0.125948, 0.137855 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Mountain2-export" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 400, 224 )
+scale = Vector2( 0.12064, 0.156496 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pine1-export" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 416, 304 )
+scale = Vector2( 0.119767, 0.0976353 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pine2-export" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 416, 344 )
+scale = Vector2( 0.121512, 0.0562814 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cloud-export" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 407, 115 )
+scale = Vector2( 0.120702, 0.120702 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite-0003" type="Sprite" parent="."]
+position = Vector2( 560, 184 )
+scale = Vector2( 0.27575, 0.0562501 )
+texture = ExtResource( 3 )
+
+[node name="Exit" type="TextureButton" parent="."]
+margin_left = 7.0
+margin_top = 275.584
+margin_right = 93.0
+margin_bottom = 361.584
+rect_scale = Vector2( 1.4, 1.4 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 5 )
+expand = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_top = 150.0
+margin_right = 800.0
+margin_bottom = 221.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+margin_right = 1650.0
+margin_bottom = 71.0
+rect_min_size = Vector2( 800, 71 )
+custom_constants/separation = 150
+
+[node name="Control" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control2" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 150.0
+margin_right = 150.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control2"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control3" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 300.0
+margin_right = 300.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control3"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control4" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 450.0
+margin_right = 450.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control4"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control5" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 600.0
+margin_right = 600.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control5"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control6" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 750.0
+margin_right = 750.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control6"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control7" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 900.0
+margin_right = 900.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control7"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control8" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 1050.0
+margin_right = 1050.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control8"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control9" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 1200.0
+margin_right = 1200.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control9"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control10" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 1350.0
+margin_right = 1350.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control10"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control11" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 1500.0
+margin_right = 1500.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control11"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[node name="Control12" type="Control" parent="ScrollContainer/HBoxContainer"]
+margin_left = 1650.0
+margin_right = 1650.0
+margin_bottom = 71.0
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer/Control12"]
+margin_left = 19.0
+margin_top = -2.0
+margin_right = 105.0
+margin_bottom = 69.0
+
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]

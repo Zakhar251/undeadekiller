@@ -20,6 +20,10 @@ var vel = Vector2()
 
 
 func _physics_process(delta):
+	
+	if Global.attac_goblin == true:
+		kill()
+		
 	if position.y >= 550:
 		get_tree().reload_current_scene()
 	
@@ -67,6 +71,7 @@ func add_coin():
 	print(coins)
 
 func kill():
+	Global.attac_goblin = false
 	hp -= damage
 	print("hp:",hp)
 	if hp < 1:

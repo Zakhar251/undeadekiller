@@ -159,7 +159,7 @@ shape = SubResource( 2 )
 position = Vector2( 31.25, -10 )
 scale = Vector2( 0.344248, 0.344248 )
 frames = SubResource( 3 )
-animation = "idle"
+animation = "jump"
 flip_h = true
 
 [node name="Animate228" type="AnimationPlayer" parent="."]

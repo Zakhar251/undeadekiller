@@ -17,11 +17,15 @@ var optimiz = true
 
 
 
+
 	
 func handle_hit():
 	hp-=damage
 	$Goblin.play("take hit")
 	print("hpNPC" + str(hp))
+	is_alive = true
+	is_attac = false
+	is_dam = false
 	if hp <1:
 		is_alive = false
 		vel.x = 0
@@ -32,6 +36,8 @@ func _der():
 		$Goblin.flip_h = !$Goblin.flip_h
 		
 func _physics_process(delta):
+	if $attc.current_animation == 'attac':
+		return
 	if optimiz == true:
 		$Goblin.visible = false
 		$frek.visible = true
@@ -50,8 +56,6 @@ func _on_Goblin_animation_finished():
 	if $Goblin.animation == "death":
 		queue_free() 
 	
-	elif $Goblin.animation == 'take hit':
-		$Goblin.play("idle")
 
 
 	elif $Goblin.animation == "attac":
@@ -62,8 +66,7 @@ func _on_attace_body_entered(body):
 	if body.name == "Player":
 		is_attac = true
 		vel.x = 0
-		$Goblin.play("attac")
-		body.kill()
+		$attc.play("attac")
 
 func handle_hit_VIKA():
 	hp-=damage_VIKA
@@ -89,3 +92,29 @@ func optimizz():
 func optimiz_true():
 	optimiz = true
 	
+func attac():
+	Global.attac_goblin = true
+	
+func hit():
+	$Attack_122.monitoring = true
+	
+func end_of_hit():
+	$Attack_122.monitoring = false
+
+func star_walk():
+	$Goblin.play("run")
+	
+
+
+
+func _on_Attack_122_body_entered(body):
+	if body.name == 'Player':
+		body.kill()
+
+
+func _on_attace_body_exited(body):
+	if body.name == 'Player':
+		is_alive = true
+		is_attac = false
+		is_dam = false
+
