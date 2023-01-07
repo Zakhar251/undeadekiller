@@ -2,18 +2,14 @@ extends Control
 
 
 func _process(delta):
-	if $LineEdit.text == "7B_govno" and Global.promocod == 1:
+	if $LineEdit.text == "Za4aR! 80509" and Global.promocod == 1:
 		Global.promocod -= 1
-		Global.kybok += 999
-		Global.kybki += 999
-		Global.red_mony += 999
-		Global.blu_mony += 999
-		Global.gems += 999
-		if Global.pers != 2:
-			Global.vika = true
-			Global.pers += 1
-			Global.free_vika -= 1
-			
+		Global.kybok += 0
+		Global.kybki += 100000
+		Global.red_mony += 0
+		Global.blu_mony += 0
+		Global.gems += 100000
+
 
 
 func _on_Exit_pressed():
@@ -36,11 +32,16 @@ func save():
 		'level2' : Global.level2,
 		'level3' : Global.level3,
 		'level4' : Global.level4,
-		'level5' : Global.level5
+		'level5' : Global.level5,
+		'levelMaik' : Global.levelMaik1,
+		'levelVika' : Global.levelVika
+		
 	})
 	
 func loade():
 	var data = Fs.load_data('save.dat')
+	if data.levelVika != 0:
+		Global.levelVika = data.levelVika
 	Global.kybki = data.mony
 	Global.kybok = data.kybok
 	Global.red_mony = data.red_mony
@@ -57,6 +58,10 @@ func loade():
 	Global.level3 = data.level3
 	Global.level4 = data.level4
 	Global.level5 = data.level5
+	if data.levelMaik != 0:
+		Global.levelMaik1 = data.levelMaik
+
+
 
 func _on_Save_pressed():
 	save()

@@ -1,0 +1,326 @@
+[gd_scene load_steps=65 format=2]
+
+[ext_resource path="res://ШРИФТ/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Box1.gd" type="Script" id=2]
+[ext_resource path="res://sprite/сундуки/Chests-export.png" type="Texture" id=3]
+[ext_resource path="res://sprite/MonedaD.png" type="Texture" id=4]
+[ext_resource path="res://sprite/MonedaD — копия-export.png" type="Texture" id=5]
+[ext_resource path="res://sprite/VМонеты/красные_монеты.png" type="Texture" id=6]
+[ext_resource path="res://sprite/VМонеты/гемы.png" type="Texture" id=7]
+[ext_resource path="res://sprite/VМонеты/синие_монеты.png" type="Texture" id=8]
+[ext_resource path="res://sprite/Вика/idle/Warrior_Idle_2-export.png" type="Texture" id=9]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_2-export.png" type="Texture" id=10]
+[ext_resource path="res://sprite/Вика/run/Warrior_Run_1-export.png" type="Texture" id=11]
+[ext_resource path="res://sprite/Вика/idle/Warrior_Idle_5-export.png" type="Texture" id=12]
+[ext_resource path="res://sprite/Вика/idle/Warrior_Idle_3-export.png" type="Texture" id=13]
+[ext_resource path="res://sprite/Вика/run/Warrior_Run_8-export.png" type="Texture" id=14]
+[ext_resource path="res://sprite/Вика/idle/Warrior_Idle_6-export.png" type="Texture" id=15]
+[ext_resource path="res://sprite/Вика/run/Warrior_Run_7-export.png" type="Texture" id=16]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_10-export.png" type="Texture" id=17]
+[ext_resource path="res://sprite/Вика/run/Warrior_Run_4-export.png" type="Texture" id=18]
+[ext_resource path="res://sprite/Вика/run/Warrior_Run_5-export.png" type="Texture" id=19]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_5-export.png" type="Texture" id=20]
+[ext_resource path="res://sprite/Вика/run/Warrior_Run_3-export.png" type="Texture" id=21]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_7-export.png" type="Texture" id=22]
+[ext_resource path="res://sprite/Вика/idle/Warrior_Idle_4-export.png" type="Texture" id=23]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_9-export.png" type="Texture" id=24]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_4-export.png" type="Texture" id=25]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_11-export.png" type="Texture" id=26]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_8-export.png" type="Texture" id=27]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_3-export.png" type="Texture" id=28]
+[ext_resource path="res://sprite/Вика/jump/Warrior_Jump_3-export.png" type="Texture" id=29]
+[ext_resource path="res://sprite/Вика/run/Warrior_Run_6-export.png" type="Texture" id=30]
+[ext_resource path="res://sprite/Вика/run/Warrior_Run_2-export.png" type="Texture" id=31]
+[ext_resource path="res://sprite/Вика/jump/Warrior_Fall_3-export.png" type="Texture" id=32]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_12-export.png" type="Texture" id=33]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_6-export.png" type="Texture" id=34]
+[ext_resource path="res://sprite/Вика/idle/Warrior_Idle_1-export.png" type="Texture" id=35]
+[ext_resource path="res://sprite/Вика/attac/Warrior_Attack_1-export.png" type="Texture" id=36]
+[ext_resource path="res://sprite/блоки/background/pine2-export.png" type="Texture" id=37]
+[ext_resource path="res://sprite/блоки/background/cloud-export.png" type="Texture" id=38]
+[ext_resource path="res://sprite/блоки/background/mountain2-export.png" type="Texture" id=39]
+[ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=40]
+[ext_resource path="res://sprite/блоки/background/pine1-export.png" type="Texture" id=41]
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 640, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 480, 640, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 960, 640, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1440, 640, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1920, 640, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 960, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 480, 960, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 960, 960, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1440, 960, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1920, 960, 480, 320 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": false,
+"name": "ot",
+"speed": 8.0
+} ]
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 10 ), ExtResource( 28 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 34 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 17 ), ExtResource( 26 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "attac",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": false,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 23 ), ExtResource( 12 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 29 ) ],
+"loop": false,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 30 ), ExtResource( 19 ), ExtResource( 14 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "run",
+"speed": 8.0
+} ]
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 480, 0, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 960, 0, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1440, 0, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1920, 0, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 320, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 480, 320, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 960, 320, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1440, 320, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1920, 320, 480, 320 )
+
+[sub_resource type="SpriteFrames" id=33]
+animations = [ {
+"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
+"loop": false,
+"name": "ot",
+"speed": 8.0
+} ]
+
+[node name="Box1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sky-export" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 407, 142.438 )
+scale = Vector2( 0.125948, 0.137855 )
+texture = ExtResource( 40 )
+
+[node name="Mountain2-export" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 400, 224 )
+scale = Vector2( 0.12064, 0.156496 )
+texture = ExtResource( 39 )
+
+[node name="Pine1-export" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 416, 304 )
+scale = Vector2( 0.119767, 0.0976353 )
+texture = ExtResource( 41 )
+
+[node name="Pine2-export" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 416, 344 )
+scale = Vector2( 0.121512, 0.0562814 )
+texture = ExtResource( 37 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cloud-export" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 407, 115 )
+scale = Vector2( 0.120702, 0.120702 )
+texture = ExtResource( 38 )
+
+[node name="Sprite2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 456, 184 )
+scale = Vector2( 0.68125, 0.68125 )
+frames = SubResource( 11 )
+frame = 3
+playing = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 344.0
+margin_top = 296.0
+margin_right = 672.0
+margin_bottom = 384.0
+custom_fonts/font = ExtResource( 1 )
+text = "Pick!!"
+
+[node name="mony_col" type="Label" parent="."]
+visible = false
+margin_left = 432.0
+margin_top = 72.0
+margin_right = 760.0
+margin_bottom = 160.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+
+[node name="new_player" type="Label" parent="."]
+visible = false
+margin_left = 288.0
+margin_top = 296.0
+margin_right = 616.0
+margin_bottom = 384.0
+custom_fonts/font = ExtResource( 1 )
+text = "New Player"
+
+[node name="Button" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+flat = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Mony" type="Sprite" parent="."]
+visible = false
+position = Vector2( 368, 96 )
+scale = Vector2( 0.562041, 0.562041 )
+texture = ExtResource( 5 )
+normal_map = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 167.297, 157.771 )
+
+[node name="red_mony" type="Sprite" parent="."]
+visible = false
+position = Vector2( 365, 96 )
+scale = Vector2( 0.562, 0.562 )
+texture = ExtResource( 6 )
+
+[node name="blu_mony" type="Sprite" parent="."]
+visible = false
+position = Vector2( 368, 96 )
+scale = Vector2( 0.562, 0.562 )
+texture = ExtResource( 8 )
+
+[node name="Game" type="Sprite" parent="."]
+visible = false
+position = Vector2( 368, 96 )
+scale = Vector2( 0.562, 0.562 )
+texture = ExtResource( 7 )
+
+[node name="Vika" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 440, 104 )
+scale = Vector2( 0.921591, 0.921591 )
+frames = SubResource( 12 )
+animation = "idle"
+frame = 5
+playing = true
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+flat = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 456, 184 )
+scale = Vector2( 0.681, 0.681 )
+frames = SubResource( 33 )
+frame = 3
+playing = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

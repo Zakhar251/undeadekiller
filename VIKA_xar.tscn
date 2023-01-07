@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://sprite/Вика/attac/Warrior_Attack_5-export.png" type="Texture" id=1]
 [ext_resource path="res://sprite/Вика/attac/Warrior_Attack_2-export.png" type="Texture" id=2]
@@ -39,6 +39,8 @@
 [ext_resource path="res://sprite/блоки/background/sky-export.png" type="Texture" id=37]
 [ext_resource path="res://sprite/новый интерфейс/Back.png" type="Texture" id=38]
 [ext_resource path="res://VIKA_xar.gd" type="Script" id=39]
+[ext_resource path="res://sprite/VМонеты/красные_монеты.png" type="Texture" id=40]
+[ext_resource path="res://sprite/Замок/1673091316210.png" type="Texture" id=41]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -151,23 +153,13 @@ margin_bottom = 50.0
 custom_fonts/font = ExtResource( 23 )
 text = "Vika, the rare fighter"
 
-[node name="Label3" type="Label" parent="."]
-margin_left = 600.0
-margin_top = 288.0
-margin_right = 739.0
-margin_bottom = 330.0
-custom_fonts/font = ExtResource( 23 )
-text = "Select"
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 245, 178 )
+position = Vector2( 355, 178 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 1 )
 animation = "idle"
+frame = 5
 playing = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="НАЗАД" type="TextureButton" parent="."]
 margin_left = 8.0
@@ -179,4 +171,53 @@ texture_normal = ExtResource( 38 )
 texture_pressed = ExtResource( 38 )
 expand = true
 
+[node name="Zvezda1_maik" type="Sprite" parent="."]
+visible = false
+position = Vector2( 56.0001, 96 )
+scale = Vector2( 0.242065, 0.242065 )
+texture = ExtResource( 41 )
+
+[node name="Zvezda1_maik2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 128, 96 )
+scale = Vector2( 0.242065, 0.242065 )
+texture = ExtResource( 41 )
+
+[node name="Zvezda1_maik3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 200, 96 )
+scale = Vector2( 0.242065, 0.242065 )
+texture = ExtResource( 41 )
+
+[node name="КрасныеМонеты" type="Sprite" parent="."]
+position = Vector2( 552, 240 )
+scale = Vector2( 0.241, 0.241 )
+texture = ExtResource( 40 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 528.0
+margin_top = 272.0
+margin_right = 784.0
+margin_bottom = 344.0
+custom_fonts/font = ExtResource( 23 )
+text = "Improve"
+flat = true
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 576.0
+margin_top = 216.0
+margin_right = 616.0
+margin_bottom = 258.0
+custom_fonts/font = ExtResource( 23 )
+text = "0"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 640.0
+margin_top = 216.0
+margin_right = 781.0
+margin_bottom = 258.0
+custom_fonts/font = ExtResource( 23 )
+text = "/ 20"
+
 [connection signal="pressed" from="НАЗАД" to="." method="_on__pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -21,6 +21,9 @@ var level5 = false
 var level_vabor = 1
 var player_level = ''
 var attac_goblin = false
+var levelMaik1 = 0
+var levelVika = 0
+
 
 func portal():
 	porrtal = true

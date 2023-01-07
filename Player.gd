@@ -20,6 +20,15 @@ var vel = Vector2()
 
 
 func _physics_process(delta):
+	if Global.levelMaik1 == 1:
+		hp = 8
+	elif Global.levelMaik1 == 2:
+		hp = 8
+		speed = 130
+	elif Global.levelMaik1 == 3:
+		hp = 9
+		speed = 135
+		
 	
 	if Global.attac_goblin == true:
 		kill()

@@ -1,0 +1,91 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Box1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprite/сундуки/Chests-export.png" type="Texture" id=2]
+[ext_resource path="res://Box3.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 1280, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 480, 1280, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 960, 1280, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1440, 1280, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1920, 1280, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 1600, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 480, 1600, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 960, 1600, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1440, 1600, 480, 320 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1920, 1600, 480, 320 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"loop": false,
+"name": "ot",
+"speed": 8.0
+} ]
+
+[node name="Box3" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Sprite2" parent="." index="1"]
+frame = 0
+
+[node name="Label" parent="." index="2"]
+margin_top = 336.0
+margin_bottom = 424.0
+
+[node name="Vika" parent="." index="10"]
+frame = 1
+
+[node name="AnimatedSprite" parent="." index="12"]
+visible = false
+frame = 0
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="13"]
+position = Vector2( 488, 176 )
+frames = SubResource( 11 )
+frame = 1
+playing = true
